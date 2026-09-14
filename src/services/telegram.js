@@ -1,0 +1,125 @@
+const BOT_TOKEN = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
+const CHAT_ID = import.meta.env.VITE_TELEGRAM_CHAT_ID;
+
+const OPTION_LETTERS = ['A', 'B', 'C', 'D'];
+
+/**
+ * Telegram bot orqali natijalarni va barcha 40 ta javobni yuborish
+ * @param {Object} resultData
+ * @returns {Promise<{success: boolean, message?: string}>}
+ */
+export async function sendTestResultToTelegram(resultData) {
+  const {
+    fullName,
+    className,
+    score,
+    totalQuestions = 40,
+    timeSpentFormatted,
+    percentage,
+    finishedAt,
+    answers = []
+  } = resultData;
+
+  // Token mavjudligini tekshirish
+  if (!BOT_TOKEN || !CHAT_ID) {
+    console.error('Telegram bot sozlamalari (.env) topilmadi!');
+    return {
+      success: false,
+      message: 'Telegram sozlamalari (.env faylida) topilmadi.'
+    };
+  }
+
+  // Brauzerda internet yo'qligini tekshirish
+  if (typeof window !== 'undefined' && typeof window.navigator !== 'undefined' && window.navigator.onLine === false) {
+    return {
+      success: false,
+      message: 'Internet aloqasi mavjud emas. Internet ulangach qayta yuboriladi.'
+    };
+  }
+
+  const dateStr = finishedAt ? new Date(finishedAt).toLocaleString('uz-UZ', {
+    timeZone: 'Asia/Tashkent',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit'
+  }) : new Date().toLocaleString('uz-UZ');
+
+  let gradeBadge = "Qoniqarsiz (2)";
+  if (percentage >= 86) gradeBadge = "A'lo (5)";
+  else if (percentage >= 71) gradeBadge = "Yaxshi (4)";
+  else if (percentage >= 56) gradeBadge = "Qoniqarli (3)";
+
+  // 40 ta savolning har biriga berilgan javoblar ro'yxati
+  let answersBreakdown = "";
+  if (answers && answers.length > 0) {
+    answersBreakdown += "\n<b>Barcha 40 ta savol natijalari:</b>\n<code>";
+    for (let i = 0; i < answers.length; i += 2) {
+      const a1 = answers[i];
+      const a2 = answers[i + 1];
+
+      const num1 = (i + 1).toString().padStart(2, '0');
+      const u1 = a1.selectedOption !== null && a1.selectedOption !== undefined ? OPTION_LETTERS[a1.selectedOption] : '-';
+      const c1 = OPTION_LETTERS[a1.correctOption];
+      const s1 = a1.isCorrect ? `[+] ${num1}:${u1}` : `[-] ${num1}:${u1}(${c1})`;
+
+      let line = s1.padEnd(16, ' ');
+
+      if (a2) {
+        const num2 = (i + 2).toString().padStart(2, '0');
+        const u2 = a2.selectedOption !== null && a2.selectedOption !== undefined ? OPTION_LETTERS[a2.selectedOption] : '-';
+        const c2 = OPTION_LETTERS[a2.correctOption];
+        const s2 = a2.isCorrect ? `[+] ${num2}:${u2}` : `[-] ${num2}:${u2}(${c2})`;
+        line += s2;
+      }
+
+      answersBreakdown += line + "\n";
+    }
+    answersBreakdown += "</code>\n<i>Izoh: [+] To'g'ri javob, [-] Xato javob (qavsda to'g'risi)</i>\n";
+  }
+
+  const text = `
+<b>[FAN OLIMPIADASI TEST NATIJASI]</b>
+━━━━━━━━━━━━━━━━━━━━━
+<b>O'quvchi:</b> <code>${fullName}</code>
+<b>Sinf:</b> <code>${className.toUpperCase()}</code>
+<b>Baho:</b> <b>${gradeBadge}</b>
+
+<b>To'plangan ball:</b> <b>${score} / ${totalQuestions}</b>
+<b>To'g'ri javoblar:</b> <b>${score} ta</b>
+<b>Xato javoblar:</b> <b>${totalQuestions - score} ta</b>
+<b>Natija foizi:</b> <b>${percentage}%</b>
+<b>Sarflangan vaqt:</b> <b>${timeSpentFormatted}</b>
+<b>Topshirilgan vaqt:</b> ${dateStr}
+━━━━━━━━━━━━━━━━━━━━━${answersBreakdown}━━━━━━━━━━━━━━━━━━━━━
+<i>Informatika va dasturlash olimpiadasi tizimi</i>
+  `.trim();
+
+  try {
+    const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        chat_id: CHAT_ID,
+        text: text,
+        parse_mode: 'HTML'
+      })
+    });
+
+    const data = await response.json();
+    if (data.ok) {
+      return { success: true, message: 'Natijalar ustozga muvaffaqiyatli yuborildi!' };
+    } else {
+      console.error('Telegram API error:', data);
+      return { success: false, message: data.description || 'Telegramga yuborishda xatolik yuz berdi' };
+    }
+  } catch (err) {
+    console.error('Network or fetch error:', err);
+    return { success: false, message: err.message || 'Tarmoq xatosi' };
+  }
+}

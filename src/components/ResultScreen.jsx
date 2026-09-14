@@ -16,20 +16,31 @@ import {
   LogOut,
   SlidersHorizontal
 } from 'lucide-react';
-import { sendTestResultToTelegram } from '../services/telegram';
+import { sendTestResultToTelegram, isTelegramResultSent, markTelegramResultSent } from '../services/telegram';
 import ConfirmModal from './ConfirmModal';
 
-export default function ResultScreen({ studentData, resultData, onRestart }) {
-  const [telegramStatus, setTelegramStatus] = useState({ 
-    loading: true, 
-    success: false, 
-    message: 'Natijalar yuborilmoqda...' 
+export default function ResultScreen({ studentData, resultData, onRestart, onTelegramSent }) {
+  const isAlreadySent = isTelegramResultSent(resultData) || Boolean(resultData?.telegramSent);
+
+  const [telegramStatus, setTelegramStatus] = useState(() => {
+    if (isAlreadySent) {
+      return { 
+        loading: false, 
+        success: true, 
+        message: 'Natijalar ustozga muvaffaqiyatli yetkazilgan!' 
+      };
+    }
+    return { 
+      loading: true, 
+      success: false, 
+      message: 'Natijalar ustozga yuborilmoqda...' 
+    };
   });
   const [filterMode, setFilterMode] = useState('all'); // 'all' | 'correct' | 'incorrect'
   const [showConfirmRestart, setShowConfirmRestart] = useState(false);
   
-  // Takroriy (2 marta) yuborilishni oldini oluvchi himoya
-  const hasSentRef = useRef(false);
+  // Takroriy yuborilishni qat'iy oldini oluvchi himoya
+  const hasSentRef = useRef(isAlreadySent);
   const isSendingRef = useRef(false);
   const questionRefs = useRef({});
 
@@ -37,12 +48,10 @@ export default function ResultScreen({ studentData, resultData, onRestart }) {
   const incorrectCount = totalQuestions - score;
   const optionLetters = ['A', 'B', 'C', 'D'];
 
-  const sendKey = `tg_sent_${studentData.fullName}_${resultData.finishedAt}`;
-
   const performTelegramSend = async (isManualRetry = false) => {
     // Agar allaqachon yuborilgan bo'lsa va bu qo'lda qayta urinish bo'lmasa, qayta yubormaymiz!
     if (!isManualRetry) {
-      if (hasSentRef.current || sessionStorage.getItem(sendKey) === 'true') {
+      if (hasSentRef.current || isTelegramResultSent(resultData) || resultData?.telegramSent) {
         setTelegramStatus({ 
           loading: false, 
           success: true, 
@@ -58,6 +67,7 @@ export default function ResultScreen({ studentData, resultData, onRestart }) {
     setTelegramStatus({ loading: true, success: false, message: 'Natijalar ustozga yuborilmoqda...' });
 
     const res = await sendTestResultToTelegram({
+      testId: resultData.testId,
       fullName: studentData.fullName,
       className: studentData.className,
       score,
@@ -72,10 +82,11 @@ export default function ResultScreen({ studentData, resultData, onRestart }) {
 
     if (res.success) {
       hasSentRef.current = true;
-      try {
-        sessionStorage.setItem(sendKey, 'true');
-      } catch (e) {}
+      markTelegramResultSent(resultData);
       setTelegramStatus({ loading: false, success: true, message: 'Natijalar ustozga muvaffaqiyatli yetkazildi!' });
+      if (onTelegramSent) {
+        onTelegramSent();
+      }
     } else {
       setTelegramStatus({ loading: false, success: false, message: res.message || 'Telegramga yuborishda xatolik yuz berdi' });
     }
@@ -94,17 +105,10 @@ export default function ResultScreen({ studentData, resultData, onRestart }) {
       }
     }
 
-    // Faqat 1 marta yuborish
-    performTelegramSend(false);
-
-    const handleOnline = () => {
-      // Faqatgina oldin yuborilmagan bo'lsa internet paydo bo'lganda yuborish
-      if (!hasSentRef.current && sessionStorage.getItem(sendKey) !== 'true') {
-        performTelegramSend(false);
-      }
-    };
-    window.addEventListener('online', handleOnline);
-    return () => window.removeEventListener('online', handleOnline);
+    // Faqat agar hali yuborilmagan bo'lsa 1 marta yuborish
+    if (!hasSentRef.current && !isTelegramResultSent(resultData) && !resultData?.telegramSent) {
+      performTelegramSend(false);
+    }
   }, []);
 
   const getGradeInfo = (pct) => {

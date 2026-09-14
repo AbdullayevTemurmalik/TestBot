@@ -46,6 +46,8 @@ export default function QuizScreen({
 
   const [timeLeft, setTimeLeft] = useState(calculateRemainingSeconds());
   const timerRef = useRef(null);
+  const isFinishingRef = useRef(false);
+  const quizCompletedRef = useRef(false);
 
   // Internet connection monitoring
   useEffect(() => {
@@ -152,6 +154,10 @@ export default function QuizScreen({
   };
 
   const finishQuiz = (finalAnswers) => {
+    if (quizCompletedRef.current) return;
+    quizCompletedRef.current = true;
+    isFinishingRef.current = true;
+
     if (timerRef.current) clearInterval(timerRef.current);
 
     const totalSecondsSpent = Math.max(1, Math.min(totalDuration, Math.round((Date.now() - quizStartTime) / 1000)));
@@ -161,8 +167,10 @@ export default function QuizScreen({
 
     const correctCount = finalAnswers.filter(a => a.isCorrect).length;
     const percentage = Math.round((correctCount / questions.length) * 100);
+    const testId = `test_${Date.now()}_${(studentData?.fullName || '').replace(/\s+/g, '_')}`;
 
     onComplete({
+      testId,
       score: correctCount,
       totalQuestions: questions.length,
       answers: finalAnswers,
@@ -176,7 +184,7 @@ export default function QuizScreen({
   const optionLetters = ['A', 'B', 'C', 'D'];
 
   const handleNext = () => {
-    if (selectedOption === null) return;
+    if (selectedOption === null || isFinishingRef.current) return;
 
     const isCorrect = selectedOption === currentQuestion.correctAnswer;
     const updatedAnswers = [
@@ -201,6 +209,7 @@ export default function QuizScreen({
       }
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
+      isFinishingRef.current = true;
       finishQuiz(updatedAnswers);
     }
   };
@@ -314,8 +323,8 @@ export default function QuizScreen({
 
             <button
               type="button"
-              className={`next-action-btn ${selectedOption === null ? 'disabled' : ''}`}
-              disabled={selectedOption === null}
+              className={`next-action-btn ${selectedOption === null || isFinishingRef.current ? 'disabled' : ''}`}
+              disabled={selectedOption === null || isFinishingRef.current}
               onClick={handleNext}
             >
               <span>

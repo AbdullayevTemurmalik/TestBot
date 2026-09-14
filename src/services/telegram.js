@@ -3,39 +3,103 @@ const CHAT_ID = import.meta.env.VITE_TELEGRAM_CHAT_ID;
 
 const OPTION_LETTERS = ['A', 'B', 'C', 'D'];
 
+// In-flight parallel so'rovlarni birlashtirish xaritasi
+const inFlightRequests = new Map();
+// Xotiradagi yuborilgan testlar to'plami
+const sentFingerprints = new Set();
+
 /**
- * Telegram bot orqali natijalarni va barcha 40 ta javobni yuborish
+ * Har bir test topshirig'i uchun noyob identifikator (barmoq izi)
+ */
+export function getTestFingerprint(data) {
+  if (!data) return 'tg_done_unknown';
+  if (data.testId) {
+    return `tg_done_${data.testId}`;
+  }
+  const normName = (data.fullName || '').toLowerCase().trim().replace(/\s+/g, '_');
+  const normClass = (data.className || '').toLowerCase().trim();
+  const dateKey = data.finishedAt ? data.finishedAt.substring(0, 19) : 'nodate';
+  return `tg_done_${normName}_${normClass}_${dateKey}`;
+}
+
+/**
+ * Ushbu test natijasi oldinroq botga yuborilganmi yoki yo'qligini tekshirish
+ */
+export function isTelegramResultSent(data) {
+  if (!data) return false;
+  if (data.telegramSent) return true;
+  const fp = getTestFingerprint(data);
+  if (sentFingerprints.has(fp)) return true;
+  try {
+    return localStorage.getItem(fp) === 'true';
+  } catch (e) {
+    return false;
+  }
+}
+
+/**
+ * Test natijasini yuborilgan deb belgilash
+ */
+export function markTelegramResultSent(data) {
+  if (!data) return;
+  const fp = getTestFingerprint(data);
+  sentFingerprints.add(fp);
+  try {
+    localStorage.setItem(fp, 'true');
+  } catch (e) {}
+}
+
+/**
+ * Telegram bot orqali natijalarni va barcha 40 ta javobni yuborish (Faqat 1 marta yuboriladi!)
  * @param {Object} resultData
- * @returns {Promise<{success: boolean, message?: string}>}
+ * @returns {Promise<{success: boolean, message?: string, alreadySent?: boolean}>}
  */
 export async function sendTestResultToTelegram(resultData) {
-  const {
-    fullName,
-    className,
-    score,
-    totalQuestions = 40,
-    timeSpentFormatted,
-    percentage,
-    finishedAt,
-    answers = []
-  } = resultData;
-
-  // Token mavjudligini tekshirish
-  if (!BOT_TOKEN || !CHAT_ID) {
-    console.error('Telegram bot sozlamalari (.env) topilmadi!');
+  // 1. Agar allaqachon muvaffaqiyatli yuborilgan bo'lsa, mutlaqo qayta yubormaymiz!
+  if (isTelegramResultSent(resultData)) {
     return {
-      success: false,
-      message: 'Telegram sozlamalari (.env faylida) topilmadi.'
+      success: true,
+      message: "Natijalar allaqachon botga yuborilgan!",
+      alreadySent: true
     };
   }
 
-  // Brauzerda internet yo'qligini tekshirish
-  if (typeof window !== 'undefined' && typeof window.navigator !== 'undefined' && window.navigator.onLine === false) {
-    return {
-      success: false,
-      message: 'Internet aloqasi mavjud emas. Internet ulangach qayta yuboriladi.'
-    };
+  const fingerprint = getTestFingerprint(resultData);
+
+  // 2. Agar ayni vaqtda parallel ravishda yuborish so'rovi ketayotgan bo'lsa,
+  // yangi fetch boshlamaymiz, mavjud so'rov natijasini kutamiz!
+  if (inFlightRequests.has(fingerprint)) {
+    return inFlightRequests.get(fingerprint);
   }
+
+  const sendPromise = (async () => {
+    const {
+      fullName,
+      className,
+      score,
+      totalQuestions = 40,
+      timeSpentFormatted,
+      percentage,
+      finishedAt,
+      answers = []
+    } = resultData;
+
+    // Token mavjudligini tekshirish
+    if (!BOT_TOKEN || !CHAT_ID) {
+      console.error('Telegram bot sozlamalari (.env) topilmadi!');
+      return {
+        success: false,
+        message: 'Telegram sozlamalari (.env faylida) topilmadi.'
+      };
+    }
+
+    // Brauzerda internet yo'qligini tekshirish
+    if (typeof window !== 'undefined' && typeof window.navigator !== 'undefined' && window.navigator.onLine === false) {
+      return {
+        success: false,
+        message: "Internet aloqasi mavjud emas. Internet ulangach qayta urinib ko'ring."
+      };
+    }
 
   const dateStr = finishedAt ? new Date(finishedAt).toLocaleString('uz-UZ', {
     timeZone: 'Asia/Tashkent',
@@ -113,6 +177,7 @@ export async function sendTestResultToTelegram(resultData) {
 
     const data = await response.json();
     if (data.ok) {
+      markTelegramResultSent(resultData);
       return { success: true, message: 'Natijalar ustozga muvaffaqiyatli yuborildi!' };
     } else {
       console.error('Telegram API error:', data);
@@ -121,5 +186,11 @@ export async function sendTestResultToTelegram(resultData) {
   } catch (err) {
     console.error('Network or fetch error:', err);
     return { success: false, message: err.message || 'Tarmoq xatosi' };
+  } finally {
+    inFlightRequests.delete(fingerprint);
   }
+  })();
+
+  inFlightRequests.set(fingerprint, sendPromise);
+  return sendPromise;
 }

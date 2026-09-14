@@ -46,6 +46,7 @@ export default function App() {
           const correctCount = savedAnswers.filter(a => a.isCorrect).length;
           const percentage = Math.round((correctCount / saved.activeQuestions.length) * 100);
           const finalResult = {
+            testId: `test_${startTime}_${(saved.studentData?.fullName || '').replace(/\s+/g, '_')}`,
             score: correctCount,
             totalQuestions: saved.activeQuestions.length,
             answers: savedAnswers,
@@ -145,6 +146,20 @@ export default function App() {
     });
   };
 
+  // Telegramga muvaffaqiyatli yuborilganda sessiyaga belgilab qo'yish
+  const handleTelegramSent = () => {
+    setResultData(prev => {
+      if (!prev) return prev;
+      const updated = { ...prev, telegramSent: true };
+      saveSession({
+        step: 'result',
+        studentData,
+        resultData: updated
+      });
+      return updated;
+    });
+  };
+
   // 5. Yangi o'quvchi uchun to'liq tozalash va Login / Ro'yxatdan o'tishga qaytish
   const handleRestart = () => {
     clearAllSessionAndDraft();
@@ -203,6 +218,7 @@ export default function App() {
           studentData={studentData}
           resultData={resultData}
           onRestart={handleRestart}
+          onTelegramSent={handleTelegramSent}
         />
       )}
     </div>

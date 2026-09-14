@@ -1,8 +1,9 @@
-// 100 ta Paskal va Olimpiada masalalari savollar bazasi
+
+// 100 ta tozalangan va tartiblangan savollar bazasi
 export const QUESTIONS_POOL = [
   {
     "id": 1,
-    "question": "1-misol: Natural n sonining raqamlarini o'ng tomondan bittalab ajratib olish dasturida oxirgi raqamni topish uchun qaysi ifoda ishlatilgan?",
+    "question": "Natural n sonining raqamlarini o'ng tomondan bittalab ajratib olish dasturida oxirgi raqamni topish uchun qaysi ifoda ishlatilgan?",
     "options": [
       "p := n mod 10",
       "p := n div 10",
@@ -13,7 +14,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 2,
-    "question": "1-misol: Raqamlarni ajratish siklida o'ngdagi oxirgi raqamni sondan o'chirib tashlash qaysi operator bilan bajariladi?",
+    "question": "Raqamlarni ajratish siklida o'ngdagi oxirgi raqamni sondan o'chirib tashlash qaysi operator bilan bajariladi?",
     "options": [
       "n := n mod 10",
       "n := n div 10",
@@ -24,7 +25,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 3,
-    "question": "2-misol: Kiritilgan sonning birinchi va oxirgi raqamlari o'rnini almashtirishda sikl qaysi shart bajarilgunicha davom etadi?",
+    "question": "Kiritilgan sonning birinchi va oxirgi raqamlari o'rnini almashtirishda sikl qaysi shart bajarilgunicha davom etadi?",
     "options": [
       "n <> 0",
       "n > 100",
@@ -35,7 +36,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 4,
-    "question": "3-misol: Natural son raqamlarini teskari tartibda yozib yangi son hosil qilishda qaysi formuladan foydalanilgan?",
+    "question": "Natural son raqamlarini teskari tartibda yozib yangi son hosil qilishda qaysi formuladan foydalanilgan?",
     "options": [
       "n1 := n1 + p",
       "n1 := n1 * 10",
@@ -46,7 +47,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 5,
-    "question": "4-misol: Natural sonni tub ko'paytuvchilarga ajratuvchi dasturda bo'luvchi qaysi sondan boshlab tekshiriladi?",
+    "question": "Natural sonni tub ko'paytuvchilarga ajratuvchi dasturda bo'luvchi qaysi sondan boshlab tekshiriladi?",
     "options": [
       "2",
       "1",
@@ -57,7 +58,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 6,
-    "question": "4a-misol: Takomillashgan algoritmda son avval 2 ga bo'lib bo'lingach, keyingi siklda bo'luvchi qanday qadam bilan oshiriladi?",
+    "question": "Takomillashgan algoritmda son avval 2 ga bo'lib bo'lingach, keyingi siklda bo'luvchi qanday qadam bilan oshiriladi?",
     "options": [
       "i := i + 1",
       "i := i + 2",
@@ -68,7 +69,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 7,
-    "question": "5-misol: Berilgan n butun soni tarkibida 2 raqami bor-yo'qligini aniqlash dasturida qaysi shart tekshiriladi?",
+    "question": "Berilgan n butun soni tarkibida 2 raqami bor-yo'qligini aniqlash dasturida qaysi shart tekshiriladi?",
     "options": [
       "if n = 2",
       "if n div 10 = 2",
@@ -79,7 +80,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 8,
-    "question": "7-misol: O'zining raqamlari kublari yig'indisiga qo'shilganda teskarisi hosil bo'luvchi ikki xonali sonlar qaysi oraliqda qidiriladi?",
+    "question": "O'zining raqamlari kublari yig'indisiga qo'shilganda teskarisi hosil bo'luvchi ikki xonali sonlar qaysi oraliqda qidiriladi?",
     "options": [
       "1 dan 100 gacha",
       "10 dan 50 gacha",
@@ -90,7 +91,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 9,
-    "question": "8-misol: Natural sonning kvadrati m ga tengligini Paskal tilida tekshirish qaysi ifoda orqali yozilgan?",
+    "question": "Natural sonning kvadrati m ga tengligini Paskal tilida tekshirish qaysi ifoda orqali yozilgan?",
     "options": [
       "if sqr(s) = m",
       "if sqrt(s) = m",
@@ -101,7 +102,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 10,
-    "question": "16-mashq: Agar son o'zidan tashqari barcha bo'luvchilari yig'indisiga teng bo'lsa, kitobda bunday son nima deb atalgan?",
+    "question": "Agar son o'zidan tashqari barcha bo'luvchilari yig'indisiga teng bo'lsa, kitobda bunday son nima deb atalgan?",
     "options": [
       "Tub son",
       "Mukammal son",
@@ -112,7 +113,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 11,
-    "question": "20-misol: O'ngdan chapga va chapdan o'ngga bir xil o'qiladigan sonlar qanday nomlanadi?",
+    "question": "O'ngdan chapga va chapdan o'ngga bir xil o'qiladigan sonlar qanday nomlanadi?",
     "options": [
       "Armstrong sonlari",
       "Mersen sonlari",
@@ -123,7 +124,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 12,
-    "question": "21-misol: Raqamlar soni juft bo'lgan 131 ga karrali eng kichik natural sonni topishda sikl qaysi shart bilan to'xtatiladi?",
+    "question": "Raqamlar soni juft bo'lgan 131 ga karrali eng kichik natural sonni topishda sikl qaysi shart bilan to'xtatiladi?",
     "options": [
       "until a = 0",
       "until n mod 131 = 0",
@@ -134,7 +135,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 13,
-    "question": "22-misol: Sonning raqamlar yig'indisini bir xonali son qolguncha takroran hisoblash natijasi nima deyiladi?",
+    "question": "Sonning raqamlar yig'indisini bir xonali son qolguncha takroran hisoblash natijasi nima deyiladi?",
     "options": [
       "Raqamli ildiz",
       "Kvadrat ildiz",
@@ -145,7 +146,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 14,
-    "question": "24-misol: Sonning barcha bo'luvchilarini sodda usulda qidirganda sikl qaysi chegaragacha davom ettiriladi?",
+    "question": "Sonning barcha bo'luvchilarini sodda usulda qidirganda sikl qaysi chegaragacha davom ettiriladi?",
     "options": [
       "until d > n",
       "until d > n div 2",
@@ -156,7 +157,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 15,
-    "question": "24a-misol: Sonning bo'luvchilarini tezkor 2-usulda topishda sikl qaysi shart asosida tashkil etilgan?",
+    "question": "Sonning bo'luvchilarini tezkor 2-usulda topishda sikl qaysi shart asosida tashkil etilgan?",
     "options": [
       "while d < n do",
       "while d <= n div 2 do",
@@ -167,7 +168,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 16,
-    "question": "25-misol: 36 va 45 sonlarining eng katta umumiy bo'luvchisi (EKUB) kitob bo'yicha nechaga teng deb topilgan?",
+    "question": "36 va 45 sonlarining eng katta umumiy bo'luvchisi (EKUB) kitob bo'yicha nechaga teng deb topilgan?",
     "options": [
       "3",
       "6",
@@ -178,7 +179,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 17,
-    "question": "25c-misol: Evklid algoritmining ayirish usulida qaysi sikl operatori qo'llanilgan?",
+    "question": "Evklid algoritmining ayirish usulida qaysi sikl operatori qo'llanilgan?",
     "options": [
       "while a <> b do",
       "repeat until a = b",
@@ -189,7 +190,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 18,
-    "question": "25d-misol: Evklid algoritmining 2-usulida qoldiq r hisoblangach, o'zgaruvchilar qanday yangilanadi?",
+    "question": "Evklid algoritmining 2-usulida qoldiq r hisoblangach, o'zgaruvchilar qanday yangilanadi?",
     "options": [
       "a := r; b := a",
       "a := b; b := r",
@@ -200,7 +201,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 19,
-    "question": "26-misol: Dasturda a va b sonlarining EKUKini topish uchun ikkinchi algoritm qaysi formulaga tayanadi?",
+    "question": "Dasturda a va b sonlarining EKUKini topish uchun ikkinchi algoritm qaysi formulaga tayanadi?",
     "options": [
       "a * b = EKUK(a, b) + EKUB(a, b)",
       "EKUK(a, b) = a * b * EKUB(a, b)",
@@ -211,7 +212,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 20,
-    "question": "27-misol: Natural n sonining tubligini tekshirish dasturida k bo'luvchilar soni bo'lsa, qaysi shartda \"tub son\" deb chiqariladi?",
+    "question": "Natural n sonining tubligini tekshirish dasturida k bo'luvchilar soni bo'lsa, qaysi shartda \"tub son\" deb chiqariladi?",
     "options": [
       "if k = 1",
       "if k = 2",
@@ -222,7 +223,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 21,
-    "question": "28-misol: Sonning tubligini 2-usul bilan aniqlashda qaysi ikkita son alohida shart bilan tekshirib olinadi?",
+    "question": "Sonning tubligini 2-usul bilan aniqlashda qaysi ikkita son alohida shart bilan tekshirib olinadi?",
     "options": [
       "n=2 va n=3",
       "n=1 va n=2",
@@ -233,7 +234,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 22,
-    "question": "51-misol: a^2 + b^2 = c^2 tenglikni qanoatlantiruvchi natural sonlar qanday nomlanadi?",
+    "question": "a^2 + b^2 = c^2 tenglikni qanoatlantiruvchi natural sonlar qanday nomlanadi?",
     "options": [
       "Mersen sonlari",
       "Pifagor sonlari",
@@ -244,7 +245,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 23,
-    "question": "54-misol: Haqiqiy x sonining kasr qismini yaxlitlamasdan tashlab yuboruvchi Paskal funksiyasi qaysi?",
+    "question": "Haqiqiy x sonining kasr qismini yaxlitlamasdan tashlab yuboruvchi Paskal funksiyasi qaysi?",
     "options": [
       "round(x)",
       "abs(x)",
@@ -255,7 +256,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 24,
-    "question": "54-misol: Haqiqiy x sonini eng yaqin butun songacha yaxlitlaydigan Paskal funksiyasi qaysi?",
+    "question": "Haqiqiy x sonini eng yaqin butun songacha yaxlitlaydigan Paskal funksiyasi qaysi?",
     "options": [
       "int(x)",
       "trunc(x)",
@@ -266,7 +267,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 25,
-    "question": "82-misol: 2^p - 1 ko'rinishidagi barcha tub sonlar fanda kimning nomi bilan ataladi?",
+    "question": "2^p - 1 ko'rinishidagi barcha tub sonlar fanda kimning nomi bilan ataladi?",
     "options": [
       "Mersen sonlari",
       "Pifagor sonlari",
@@ -277,7 +278,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 26,
-    "question": "84-misol: Raqamlari soni n bo'lgan sonning n-darajaga ko'tarilgan raqamlari yig'indisi o'ziga teng bo'lsa, bu qanday son?",
+    "question": "Raqamlari soni n bo'lgan sonning n-darajaga ko'tarilgan raqamlari yig'indisi o'ziga teng bo'lsa, bu qanday son?",
     "options": [
       "Mukammal son",
       "Armstrong soni",
@@ -288,7 +289,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 27,
-    "question": "84-misol: Kitobda 3 xonali Armstrong soniga qaysi son misol tariqasida keltirilgan?",
+    "question": "Kitobda 3 xonali Armstrong soniga qaysi son misol tariqasida keltirilgan?",
     "options": [
       "121",
       "215",
@@ -299,7 +300,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 28,
-    "question": "88-misol: Kitob betlarini nomerlash masalasida 1 xonali sonlar (1 dan 9 gacha) uchun nechta raqam ishlatiladi?",
+    "question": "Kitob betlarini nomerlash masalasida 1 xonali sonlar (1 dan 9 gacha) uchun nechta raqam ishlatiladi?",
     "options": [
       "10 ta",
       "8 ta",
@@ -310,7 +311,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 29,
-    "question": "90-misol: 123456789101112... ketma-ket yozilganda nechta raqamdan keyingi oxirgi raqamni topish talab etiladi?",
+    "question": "123456789101112... ketma-ket yozilganda nechta raqamdan keyingi oxirgi raqamni topish talab etiladi?",
     "options": [
       "1000 ta",
       "100 ta",
@@ -321,7 +322,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 30,
-    "question": "91-misol: Barcha juft sonlar ketma-ket yozilganda (24681012...) nechanchi o'rindagi raqamni topish so'ralgan?",
+    "question": "Barcha juft sonlar ketma-ket yozilganda (24681012...) nechanchi o'rindagi raqamni topish so'ralgan?",
     "options": [
       "1000-o'rindagi",
       "1971-o'rindagi",
@@ -332,7 +333,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 31,
-    "question": "92-misol: Olti xonali avtobus chiptasi qachon \"baxtli chipta\" hisoblanadi?",
+    "question": "Olti xonali avtobus chiptasi qachon \"baxtli chipta\" hisoblanadi?",
     "options": [
       "Raqamlari yig'indisi 21 ga teng bo'lsa",
       "Raqamlari faqat toq bo'lsa",
@@ -343,7 +344,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 32,
-    "question": "92-misol: Baxtli avtobus chiptalari nomerlari qaysi oraliqda ko'rib chiqiladi?",
+    "question": "Baxtli avtobus chiptalari nomerlari qaysi oraliqda ko'rib chiqiladi?",
     "options": [
       "[000001; 999999]",
       "[100000; 500000]",
@@ -354,7 +355,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 33,
-    "question": "97-mashq: O'z raqamlari faktoriallarining yig'indisiga teng bo'lgan qiziq son (1! + 4! + 5!) nechaga teng?",
+    "question": "O'z raqamlari faktoriallarining yig'indisiga teng bo'lgan qiziq son (1! + 4! + 5!) nechaga teng?",
     "options": [
       "145",
       "120",
@@ -365,7 +366,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 34,
-    "question": "108-misol: Ko'llar zanjiriga qo'nayotgan oq g'ozlar masalasida hosil bo'ladigan rekurrent munosabat qaysi?",
+    "question": "Ko'llar zanjiriga qo'nayotgan oq g'ozlar masalasida hosil bo'ladigan rekurrent munosabat qaysi?",
     "options": [
       "x_k = x_{k-1} / 2",
       "x_k = 2 * x_{k-1} - 1",
@@ -376,7 +377,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 35,
-    "question": "108-misol: G'ozlar 7 ta ko'lga qo'ngan bo'lsa, galada boshida jami nechta oq g'oz bo'lgan?",
+    "question": "G'ozlar 7 ta ko'lga qo'ngan bo'lsa, galada boshida jami nechta oq g'oz bo'lgan?",
     "options": [
       "127 ta",
       "128 ta",
@@ -387,7 +388,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 36,
-    "question": "120-misol: 25x - 36y = 1 ko'rinishidagi bittadan ortiq noma'lumga ega tenglamalar nima deb ataladi?",
+    "question": "25x - 36y = 1 ko'rinishidagi bittadan ortiq noma'lumga ega tenglamalar nima deb ataladi?",
     "options": [
       "Chiziqli tenglamalar sistemasi",
       "Noaniq tenglamalar (Diofant tenglamalari)",
@@ -398,7 +399,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 37,
-    "question": "121-misol: 15x + 37y = 1 tenglamaning butun yechimlarini topishda qaysi algoritm qo'llaniladi?",
+    "question": "15x + 37y = 1 tenglamaning butun yechimlarini topishda qaysi algoritm qo'llaniladi?",
     "options": [
       "Nyuton usuli",
       "Eratosfen to'ri",
@@ -409,7 +410,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 38,
-    "question": "147-misol: n ta elementdan k tadan olingan tartiblangan qism to'plamlar nima deb ataladi?",
+    "question": "n ta elementdan k tadan olingan tartiblangan qism to'plamlar nima deb ataladi?",
     "options": [
       "Birikmalar",
       "To'plamlar",
@@ -420,7 +421,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 39,
-    "question": "147-misol: n ta elementdan k tadan joylashtirishlar soni qaysi formula bilan topiladi?",
+    "question": "n ta elementdan k tadan joylashtirishlar soni qaysi formula bilan topiladi?",
     "options": [
       "A_n^k = n! / (n - k)!",
       "A_n^k = n! / k!",
@@ -431,7 +432,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 40,
-    "question": "156-misol: n ta elementdan tashkil topgan to'plamning har qanday to'liq tartiblangan ko'rinishi nima deyiladi?",
+    "question": "n ta elementdan tashkil topgan to'plamning har qanday to'liq tartiblangan ko'rinishi nima deyiladi?",
     "options": [
       "Joylashtirish",
       "O'rin almashtirish (P_n)",
@@ -442,7 +443,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 41,
-    "question": "156-misol: 10 ta odam navbatda necha xil usul bilan turishi mumkin?",
+    "question": "10 ta odam navbatda necha xil usul bilan turishi mumkin?",
     "options": [
       "10! usulda",
       "100 usulda",
@@ -453,7 +454,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 42,
-    "question": "159-misol: Elementlari takrorlanadigan to'plamlar uchun o'rin almashtirishlar soni qaysi formula bilan topiladi?",
+    "question": "Elementlari takrorlanadigan to'plamlar uchun o'rin almashtirishlar soni qaysi formula bilan topiladi?",
     "options": [
       "P = n! * n1! * n2!",
       "P = n! / (n1! * n2! * ...)",
@@ -464,7 +465,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 43,
-    "question": "161-misol: n ta elementdan tuzilgan, elementlarning tartibi ahamiyatga ega bo'lmagan qism to'plamlar nima deyiladi?",
+    "question": "n ta elementdan tuzilgan, elementlarning tartibi ahamiyatga ega bo'lmagan qism to'plamlar nima deyiladi?",
     "options": [
       "Joylashtirish",
       "O'rin almashtirish",
@@ -475,7 +476,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 44,
-    "question": "161-misol: n elementdan k tadan birikmalar soni formulasi qaysi?",
+    "question": "n elementdan k tadan birikmalar soni formulasi qaysi?",
     "options": [
       "C_n^k = n! / (n - k)!",
       "C_n^k = k! / (n - k)!",
@@ -508,7 +509,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 47,
-    "question": "168-misol: 52 ta kartadan 10 tasi tanlanganda hech bo'lmaganda bitta tuz bo'lish kombinatsiyalari qanday hisoblanadi?",
+    "question": "52 ta kartadan 10 tasi tanlanganda hech bo'lmaganda bitta tuz bo'lish kombinatsiyalari qanday hisoblanadi?",
     "options": [
       "C_52^10 + C_48^10",
       "C_52^4 * C_48^6",
@@ -519,7 +520,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 48,
-    "question": "170-misol: Agar son q = p1^a1 * p2^a2 * ... ko'rinishida bo'lsa, uning barcha bo'luvchilari soni qaysi ko'paytmaga teng?",
+    "question": "Agar son q = p1^a1 * p2^a2 * ... ko'rinishida bo'lsa, uning barcha bo'luvchilari soni qaysi ko'paytmaga teng?",
     "options": [
       "a1 * a2 * ... * am",
       "(a1 - 1) * (a2 - 1) * ...",
@@ -530,7 +531,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 49,
-    "question": "191-misol: Massivning k-elementini surish orqali birinchi o'ringa ko'chirish sikli qaysi indeksgacha davom etadi?",
+    "question": "Massivning k-elementini surish orqali birinchi o'ringa ko'chirish sikli qaysi indeksgacha davom etadi?",
     "options": [
       "for i := k downto 2 do",
       "for i := k downto 1 do",
@@ -541,7 +542,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 50,
-    "question": "194-misol: Tartiblangan massiv ichiga yangi son qo'shishda uning joyini topish uchun qaysi tezkor protsedura chaqiriladi?",
+    "question": "Tartiblangan massiv ichiga yangi son qo'shishda uning joyini topish uchun qaysi tezkor protsedura chaqiriladi?",
     "options": [
       "linear_search",
       "quick_search (ikkilik qidiruv)",
@@ -552,7 +553,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 51,
-    "question": "194-misol: Ikkilik qidiruv protsedurasida o'rta element indeksi qanday topiladi?",
+    "question": "Ikkilik qidiruv protsedurasida o'rta element indeksi qanday topiladi?",
     "options": [
       "s := (p + q) div 2",
       "s := (p + q) mod 2",
@@ -563,7 +564,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 52,
-    "question": "196-misol: Chapida o'zidan kichik, o'ngida o'zidan kattalar joylashgan massiv elementi nima deb ataladi?",
+    "question": "Chapida o'zidan kichik, o'ngida o'zidan kattalar joylashgan massiv elementi nima deb ataladi?",
     "options": [
       "Boshlang'ich element",
       "\"O'rta\" element (middle/pivot)",
@@ -574,7 +575,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 53,
-    "question": "197-misol: Massivni \"o'rta\" element yordamida ikkiga bo'lib rekursiv tartiblash usuli qanday nomlanadi?",
+    "question": "Massivni \"o'rta\" element yordamida ikkiga bo'lib rekursiv tartiblash usuli qanday nomlanadi?",
     "options": [
       "Pufaksimon tartiblash",
       "Oddiy tanlash",
@@ -585,7 +586,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 54,
-    "question": "221-misol: Massivdan nolga teng elementlarni oxiriga o'tkazishda elementlar o'rnini almashtirish uchun qanday protsedura tuzilgan?",
+    "question": "Massivdan nolga teng elementlarni oxiriga o'tkazishda elementlar o'rnini almashtirish uchun qanday protsedura tuzilgan?",
     "options": [
       "fast(q, p)",
       "create(n)",
@@ -596,7 +597,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 55,
-    "question": "222-misol: Tartiblangan ikkita sonli massivni bitta tartiblangan yangi massivga birlashtiruvchi protsedura nomi qanday?",
+    "question": "Tartiblangan ikkita sonli massivni bitta tartiblangan yangi massivga birlashtiruvchi protsedura nomi qanday?",
     "options": [
       "new(n, m, q, p, k, c)",
       "fast(q, p, a)",
@@ -607,7 +608,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 56,
-    "question": "223-misol: Ikki o'lchovli matrisani bir o'lchovli massivga \"cho'zish\" (yoyish) protsedurasi dasturda qanday nomlangan?",
+    "question": "Ikki o'lchovli matrisani bir o'lchovli massivga \"cho'zish\" (yoyish) protsedurasi dasturda qanday nomlangan?",
     "options": [
       "create_two",
       "sprain",
@@ -618,7 +619,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 57,
-    "question": "223-misol: Matrisani ilonizi to'ldirishda qaysi ustunlar tepadan pastga qarab o'sib borish tartibida to'ldiriladi?",
+    "question": "Matrisani ilonizi to'ldirishda qaysi ustunlar tepadan pastga qarab o'sib borish tartibida to'ldiriladi?",
     "options": [
       "Juft nomerli ustunlar",
       "Barcha ustunlar",
@@ -629,7 +630,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 58,
-    "question": "224a-misol: Matrisaning qatorlari bo'yicha ilonizi to'ldirishda juft qatorlar qaysi yo'nalishda to'ldiriladi?",
+    "question": "Matrisaning qatorlari bo'yicha ilonizi to'ldirishda juft qatorlar qaysi yo'nalishda to'ldiriladi?",
     "options": [
       "Chapdan o'ngga",
       "Diagonal bo'ylab",
@@ -640,7 +641,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 59,
-    "question": "225-misol: Portfelga umumiy og'irligi 50 kg dan oshmaydigan eng qimmat darsliklarni joylashtirishda qaysi protsedura kombinatsiyalarni hosil qiladi?",
+    "question": "Portfelga umumiy og'irligi 50 kg dan oshmaydigan eng qimmat darsliklarni joylashtirishda qaysi protsedura kombinatsiyalarni hosil qiladi?",
     "options": [
       "gen_comb",
       "fast",
@@ -651,7 +652,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 60,
-    "question": "261-misol: n x n doskada n ta bir-biriga xavf solmaydigan ladyalarni joylashtirish usullari soni nimaga teng?",
+    "question": "n x n doskada n ta bir-biriga xavf solmaydigan ladyalarni joylashtirish usullari soni nimaga teng?",
     "options": [
       "n^2",
       "n! (o'rin almashtirishlar soni)",
@@ -662,7 +663,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 61,
-    "question": "263-misol: Tajribalar sonini berilgan aniqlik va kafolatlangan ehtimollik bo'yicha hisoblashda qaysi integral formula qo'llanilgan?",
+    "question": "Tajribalar sonini berilgan aniqlik va kafolatlangan ehtimollik bo'yicha hisoblashda qaysi integral formula qo'llanilgan?",
     "options": [
       "Muavr-Laplas integral formulasi",
       "Eyler formulasi",
@@ -673,7 +674,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 62,
-    "question": "264-misol: Kesmada ixtiyoriy tanlangan M va N nuqtalardan M nuqta A ga yaqinroq bo'lishi qaysi shart bilan tekshiriladi?",
+    "question": "Kesmada ixtiyoriy tanlangan M va N nuqtalardan M nuqta A ga yaqinroq bo'lishi qaysi shart bilan tekshiriladi?",
     "options": [
       "x > y",
       "y > x",
@@ -684,7 +685,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 63,
-    "question": "267-misol: Radiusi R ga teng doiraga ichki chizilgan muntazam uchburchak yuzasining doira yuzasiga nisbati nechaga teng?",
+    "question": "Radiusi R ga teng doiraga ichki chizilgan muntazam uchburchak yuzasining doira yuzasiga nisbati nechaga teng?",
     "options": [
       "3 / (4 * pi)",
       "1 / pi",
@@ -695,7 +696,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 64,
-    "question": "268a-misol: O'yin kubigi 2 marta tashlanganda chiqqan ballar yig'indisi 10 dan kichik bo'lmaslik sharti qanday yoziladi?",
+    "question": "O'yin kubigi 2 marta tashlanganda chiqqan ballar yig'indisi 10 dan kichik bo'lmaslik sharti qanday yoziladi?",
     "options": [
       "x + y < 10",
       "x + y = 10",
@@ -706,7 +707,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 65,
-    "question": "268b-misol: Birinchi kubikdagi son ikkinchisiga qoldiqsiz bo'linish ehtimolini hisoblash sharti qaysi?",
+    "question": "Birinchi kubikdagi son ikkinchisiga qoldiqsiz bo'linish ehtimolini hisoblash sharti qaysi?",
     "options": [
       "x mod y = 0",
       "y mod x = 0",
@@ -717,7 +718,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 66,
-    "question": "271-misol: Aylanada olingan ixtiyoriy 3 ta nuqta hosil qilgan uchburchakning o'tkir burchakli bo'lish ehtimoli nechaga teng?",
+    "question": "Aylanada olingan ixtiyoriy 3 ta nuqta hosil qilgan uchburchakning o'tkir burchakli bo'lish ehtimoli nechaga teng?",
     "options": [
       "1/2",
       "1/4",
@@ -728,7 +729,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 67,
-    "question": "306-misol: Qaytimni avtomatik hisoblashda eng kam tangalar sonini ishlatish uchun qaysi tangalardan boshlab beriladi?",
+    "question": "Qaytimni avtomatik hisoblashda eng kam tangalar sonini ishlatish uchun qaysi tangalardan boshlab beriladi?",
     "options": [
       "Qadri eng past tangalardan",
       "Faqat 1 santimlik tangalardan",
@@ -739,7 +740,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 68,
-    "question": "306a-misol: Har bir nominaldagi tangalar soni Q[i] qaysi formula bilan hisoblanadi?",
+    "question": "Har bir nominaldagi tangalar soni Q[i] qaysi formula bilan hisoblanadi?",
     "options": [
       "Q[i] := E mod P[i]",
       "Q[i] := E * P[i]",
@@ -750,7 +751,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 69,
-    "question": "307-misol: Qadimiy qasr devorlarini o'rab oluvchi eng qisqa to'siq masalasida kiruvchi ma'lumotlar qaysi fayldan o'qiladi?",
+    "question": "Qadimiy qasr devorlarini o'rab oluvchi eng qisqa to'siq masalasida kiruvchi ma'lumotlar qaysi fayldan o'qiladi?",
     "options": [
       "castle.in",
       "input.txt",
@@ -761,7 +762,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 70,
-    "question": "308-misol: Paskal uchburchagining n-qatoridagi toq sonlar sonini chiqaruvchi dastur natijasi qaysi faylga yoziladi?",
+    "question": "Paskal uchburchagining n-qatoridagi toq sonlar sonini chiqaruvchi dastur natijasi qaysi faylga yoziladi?",
     "options": [
       "output.txt",
       "pascal.out",
@@ -772,7 +773,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 71,
-    "question": "309-misol: Tranzistorlarning sinishini tekshiruvchi tajribachi masalasida eng kam qavatlar sonini hisoblash dasturi fayli qaysi?",
+    "question": "Tranzistorlarning sinishini tekshiruvchi tajribachi masalasida eng kam qavatlar sonini hisoblash dasturi fayli qaysi?",
     "options": [
       "tester.in",
       "input.txt",
@@ -783,7 +784,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 72,
-    "question": "310-misol: Tortdagi shamlar kesmalar bilan bo'linganda bir bo'lakka bittadan ortiq sham tushsa ekranga nima chiqariladi?",
+    "question": "Tortdagi shamlar kesmalar bilan bo'linganda bir bo'lakka bittadan ortiq sham tushsa ekranga nima chiqariladi?",
     "options": [
       "1",
       "ERROR",
@@ -794,7 +795,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 73,
-    "question": "311-misol: Taqiqlangan n-burchak yasalishiga yo'l qo'ymaslik uchun kesmalar uzunligi qaysi qonuniyat asosida o'sishi kerak?",
+    "question": "Taqiqlangan n-burchak yasalishiga yo'l qo'ymaslik uchun kesmalar uzunligi qaysi qonuniyat asosida o'sishi kerak?",
     "options": [
       "Fibonachchi ketma-ketligi (r := l + p)",
       "Arifmetik progressiya",
@@ -805,7 +806,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 74,
-    "question": "312-misol: To'g'ri burchakli jadval uchlaridagi 4 ta yacheyka yig'indisi eng katta bo'lgan to'rtburchakni topish masalasi nomi nima?",
+    "question": "To'g'ri burchakli jadval uchlaridagi 4 ta yacheyka yig'indisi eng katta bo'lgan to'rtburchakni topish masalasi nomi nima?",
     "options": [
       "Qiyin masala",
       "Oson bo'lmagan masala (problem)",
@@ -816,7 +817,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 75,
-    "question": "313-misol: Prezident dollar va yevroga neft sotib olishi masalasida javob qanday formatda chiqarilishi talab etiladi?",
+    "question": "Prezident dollar va yevroga neft sotib olishi masalasida javob qanday formatda chiqarilishi talab etiladi?",
     "options": [
       "Butun son ko'rinishida",
       "Verguldan keyin 4 ta belgi bilan",
@@ -827,7 +828,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 76,
-    "question": "315-misol: Oq va qora otlar kerakli katakka borishi uchun harakatlanish ketma-ketligi qaysi faylga yoziladi?",
+    "question": "Oq va qora otlar kerakli katakka borishi uchun harakatlanish ketma-ketligi qaysi faylga yoziladi?",
     "options": [
       "result.out",
       "output.txt",
@@ -838,7 +839,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 77,
-    "question": "316-misol: \"Saper\" o'yini maydonida mina joylashgan katak qanday belgi bilan ifodalanadi?",
+    "question": "\"Saper\" o'yini maydonida mina joylashgan katak qanday belgi bilan ifodalanadi?",
     "options": [
       "\"*\" (yulduzcha)",
       "\".\" (nuqta)",
@@ -849,7 +850,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 78,
-    "question": "316-misol: \"Saper\" maydonida bo'sh katak qanday belgi bilan belgilanadi?",
+    "question": "\"Saper\" maydonida bo'sh katak qanday belgi bilan belgilanadi?",
     "options": [
       "Bo'sh joy (probel)",
       "\".\" (nuqta)",
@@ -860,7 +861,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 79,
-    "question": "319-misol: Vaqtni yozgi vaqtga o'tkazishda soat ko'rsatkichi qaysi formatda chiqariladi?",
+    "question": "Vaqtni yozgi vaqtga o'tkazishda soat ko'rsatkichi qaysi formatda chiqariladi?",
     "options": [
       "hh:mm:ss",
       "h:m",
@@ -871,7 +872,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 80,
-    "question": "321-misol: R radiusli aylanadagi ustunga bog'langan echkining o'tloqning teng yarmini yeyishi masalasi nomi nima?",
+    "question": "R radiusli aylanadagi ustunga bog'langan echkining o'tloqning teng yarmini yeyishi masalasi nomi nima?",
     "options": [
       "O'tloq masalasi",
       "Bog'langan arqon",
@@ -882,7 +883,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 81,
-    "question": "321a-misol: Echki masalasida D masofa bo'yicha yem yuzasini hisoblashda burchak qaysi teskari trigonometrik funksiya orqali topiladi?",
+    "question": "Echki masalasida D masofa bo'yicha yem yuzasini hisoblashda burchak qaysi teskari trigonometrik funksiya orqali topiladi?",
     "options": [
       "ARCTAN",
       "ARCSIN",
@@ -893,7 +894,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 82,
-    "question": "323-misol: Hodisa guvohidan olingan avtomobil nomerida nechta harf va nechta raqam qatnashadi?",
+    "question": "Hodisa guvohidan olingan avtomobil nomerida nechta harf va nechta raqam qatnashadi?",
     "options": [
       "2 ta harf, 4 ta raqam",
       "3 ta harf va 3 ta raqam",
@@ -904,7 +905,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 83,
-    "question": "325-misol: Sex konveyerida mahsulotlar nechta konteynerga teng taqsimlanishi kerak?",
+    "question": "Sex konveyerida mahsulotlar nechta konteynerga teng taqsimlanishi kerak?",
     "options": [
       "2 ta",
       "4 ta",
@@ -915,7 +916,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 84,
-    "question": "326-misol: Yo'lchi varoqdagi aylanachalarni qaysi 3 ta rangdan biriga bo'yagan?",
+    "question": "Yo'lchi varoqdagi aylanachalarni qaysi 3 ta rangdan biriga bo'yagan?",
     "options": [
       "Oq, qora, kulrang",
       "Sariq, ko'k, yashil",
@@ -926,7 +927,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 85,
-    "question": "330-misol: Bekinmachoq o'yinida bolalarning aylanadan chiqishni unutib xato sanashi qaysi masala nomi bilan berilgan?",
+    "question": "Bekinmachoq o'yinida bolalarning aylanadan chiqishni unutib xato sanashi qaysi masala nomi bilan berilgan?",
     "options": [
       "Noto'g'ri hisoblagich (wrong)",
       "Doiraviy o'yin",
@@ -937,7 +938,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 86,
-    "question": "333-misol: Murakkab sonlarni o'chirib faqat tub sonlarni qoldiruvchi qadimiy algoritm nima deyiladi?",
+    "question": "Murakkab sonlarni o'chirib faqat tub sonlarni qoldiruvchi qadimiy algoritm nima deyiladi?",
     "options": [
       "Evklid algoritmi",
       "Eratosfen to'ri",
@@ -948,7 +949,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 87,
-    "question": "333-misol: Eratosfen to'ri dasturida tekshiruvchi sikl qaysi chegaragacha davom etadi?",
+    "question": "Eratosfen to'ri dasturida tekshiruvchi sikl qaysi chegaragacha davom etadi?",
     "options": [
       "f := n div 2",
       "f := n - 1",
@@ -959,7 +960,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 88,
-    "question": "333-misol: Eratosfen algoritmi dasturida murakkab sonlar o'chirilganda massiv elementi qaysi songa tenglashtiriladi?",
+    "question": "Eratosfen algoritmi dasturida murakkab sonlar o'chirilganda massiv elementi qaysi songa tenglashtiriladi?",
     "options": [
       "-1",
       "1",
@@ -970,7 +971,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 89,
-    "question": "334-misol: \"4 dan katta har qanday juft sonni ikkita tub son yig'indisi ko'rinishida ifodalash mumkin\" bu qaysi gipoteza?",
+    "question": "\"4 dan katta har qanday juft sonni ikkita tub son yig'indisi ko'rinishida ifodalash mumkin\" bu qaysi gipoteza?",
     "options": [
       "Goldbax gipotezasi",
       "Ferma teoremasi",
@@ -981,7 +982,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 90,
-    "question": "335-misol: Ayirmasi 2 ga teng bo'lgan tub sonlar (masalan, 5 va 7) fanda nima deb ataladi?",
+    "question": "Ayirmasi 2 ga teng bo'lgan tub sonlar (masalan, 5 va 7) fanda nima deb ataladi?",
     "options": [
       "Qo'shni sonlar",
       "Egizaklar (egizak tub sonlar)",
@@ -992,7 +993,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 91,
-    "question": "336-misol: Ikkita shaxs 11 va 12 soatlar orasida kelib 20 minut (1/3 soat) kutishi geometrik jihatdan qaysi shartni beradi?",
+    "question": "Ikkita shaxs 11 va 12 soatlar orasida kelib 20 minut (1/3 soat) kutishi geometrik jihatdan qaysi shartni beradi?",
     "options": [
       "|x - y| <= 1/3",
       "x + y <= 1/3",
@@ -1003,7 +1004,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 92,
-    "question": "336-misol: 20 minut kutish shartida uchrashuvning sodir bo'lish ehtimoli Monte-Karlo usulida taxminan qanchaga teng chiqadi?",
+    "question": "20 minut kutish shartida uchrashuvning sodir bo'lish ehtimoli Monte-Karlo usulida taxminan qanchaga teng chiqadi?",
     "options": [
       "0.3333",
       "0.7500",
@@ -1014,7 +1015,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 93,
-    "question": "339-misol: Tomoni 1 bo'lgan katak markazidan 1/2 dan kichik masofada joylashish ehtimoli qaysi sonni hisoblashda qo'llaniladi?",
+    "question": "Tomoni 1 bo'lgan katak markazidan 1/2 dan kichik masofada joylashish ehtimoli qaysi sonni hisoblashda qo'llaniladi?",
     "options": [
       "Pi sonini (Pi / 4)",
       "e sonini",
@@ -1025,7 +1026,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 94,
-    "question": "339-misol: Kvadratga tushgan m ta nuqta va umumiy n ta nuqtadan Pi sonini topish formulasi dasturda qanday berilgan?",
+    "question": "Kvadratga tushgan m ta nuqta va umumiy n ta nuqtadan Pi sonini topish formulasi dasturda qanday berilgan?",
     "options": [
       "p := m / n",
       "p := 4 * m / n",
@@ -1036,7 +1037,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 95,
-    "question": "340-misol: Tekislikka uzunligi 1 bo'lgan igna tashlanganda chiziqni kesib o'tish ehtimoli qaysi klassik masala hisoblanadi?",
+    "question": "Tekislikka uzunligi 1 bo'lgan igna tashlanganda chiziqni kesib o'tish ehtimoli qaysi klassik masala hisoblanadi?",
     "options": [
       "Eyler masalasi",
       "Paskal masalasi",
@@ -1047,7 +1048,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 96,
-    "question": "340-misol: Byuffon ignasi masalasida ehtimollik qaysi analitik qiymatga teng bo'ladi?",
+    "question": "Byuffon ignasi masalasida ehtimollik qaysi analitik qiymatga teng bo'ladi?",
     "options": [
       "1 / Pi",
       "Pi / 2",
@@ -1058,7 +1059,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 97,
-    "question": "341-misol: Benaress ibodatxonasidagi Xanoy minorasi afsonasida rohiblar jami nechta oltin diskni ko'chirishlari kerak bo'lgan?",
+    "question": "Benaress ibodatxonasidagi Xanoy minorasi afsonasida rohiblar jami nechta oltin diskni ko'chirishlari kerak bo'lgan?",
     "options": [
       "64 ta",
       "32 ta",
@@ -1069,7 +1070,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 98,
-    "question": "341-misol: n ta diskdan iborat Xanoy minorasini ko'chirish uchun jami nechta operatsiya talab etiladi?",
+    "question": "n ta diskdan iborat Xanoy minorasini ko'chirish uchun jami nechta operatsiya talab etiladi?",
     "options": [
       "2 * n",
       "2^n - 1",
@@ -1080,7 +1081,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 99,
-    "question": "342-misol: Shaxmat doskasida 8 ta ferz bir-birini urmasligi uchun ularning diagonallari to'qnashmaslik sharti qanday yoziladi?",
+    "question": "Shaxmat doskasida 8 ta ferz bir-birini urmasligi uchun ularning diagonallari to'qnashmaslik sharti qanday yoziladi?",
     "options": [
       "D[i] <> D[j]",
       "abs(D[i] - D[j]) = abs(i - j)",
@@ -1091,7 +1092,7 @@ export const QUESTIONS_POOL = [
   },
   {
     "id": 100,
-    "question": "347-misol: Santa-Klausning 5x5 o'lchamli jadvaldagi mahfiy tilida qaysi lotin harfi ishlatilmaydi?",
+    "question": "Santa-Klausning 5x5 o'lchamli jadvaldagi mahfiy tilida qaysi lotin harfi ishlatilmaydi?",
     "options": [
       "'X'",
       "'Y'",
@@ -1117,35 +1118,39 @@ export function getRandomQuestions(count = 40) {
 
 /**
  * Maxsus ishtirokchini aniqlash:
- * Agar ism "Abdullayev Temurmalik" yoki "Imonov Mahmudjon" (yoki birgalikda) bo'lsa
- * va sinf "10-B" bo'lsa, maxsus tartib qo'llanadi.
+ * Faqat "Abdullayev Temurmalik" va "Iminov Mahmudjon" (yoki "Imonov Mahmudjon")
+ * ismlari kiritilgandagina 1 dan 40 gacha ketma-ket chiqadi.
  */
-export function isSpecialStudent(fullName = '', className = '') {
-  if (!fullName || !className) return false;
+export function isSpecialStudent(fullName = '') {
+  if (!fullName) return false;
 
-  const normName = fullName.toLowerCase().replace(/['`ʻ’]/g, '').trim();
-  const normClass = className.toLowerCase().trim();
+  const norm = fullName.toLowerCase().replace(/['`ʻ’]/g, '').trim();
 
-  const isClass10B = normClass === '10-b' || normClass === '10-б';
-  if (!isClass10B) return false;
+  // Abdullayev Temurmalik
+  const hasTemur = norm.includes('temurmalik') || (norm.includes('temur') && norm.includes('abdullayev'));
+  
+  // Iminov Mahmudjon (yoki Imonov Mahmudjon)
+  const hasMahmud = norm.includes('mahmudjon') || norm.includes('mahmud');
+  const hasIminov = norm.includes('iminov') || norm.includes('imonov') || norm.includes('imin') || norm.includes('imon');
+  const hasMahmudIminov = hasMahmud && hasIminov;
 
-  const hasTemurmalik = normName.includes('temurmalik') || (normName.includes('temur') && normName.includes('abdullayev'));
-  const hasMahmudjon = normName.includes('mahmudjon') || (normName.includes('mahmud') && normName.includes('imonov'));
-  const hasBoth = normName.includes('abdullayev') && normName.includes('imonov');
+  // Ikkalasi birgalikda: Abdullayev Temurmalik va Iminov Mahmudjon
+  const hasBoth = norm.includes('abdullayev') && hasIminov;
 
-  return hasTemurmalik || hasMahmudjon || hasBoth;
+  return hasTemur || hasMahmudIminov || hasBoth;
 }
 
 /**
  * Talabaga mos savollarni berish:
- * Abdullayev Temurmalik va Imonov Mahmudjon (10-B) uchun 1 dan 40 gacha qat'iy tartibda.
- * Qolgan barcha o'quvchilar uchun to'liq tasodifiy (random) 40 ta savol.
+ * Abdullayev Temurmalik yoki Iminov Mahmudjon kiritilganda:
+ * Boshidagi 1 dan 40 gacha savollar qat'iy tartibda (1, 2, 3, ... 40) chiqadi (random emas).
+ * Boshqa barcha ism-familiyalar uchun: to'liq tasodifiy (random) 40 ta savol chiqadi.
  */
 export function getQuestionsForStudent(fullName, className) {
-  if (isSpecialStudent(fullName, className)) {
-    // 1-savoldan 40-savolgacha qat'iy navbat bilan
+  if (isSpecialStudent(fullName)) {
+    // Random emas, boshidagi 1 dan 40 gacha savollar
     return QUESTIONS_POOL.slice(0, 40);
   }
-  // Qolgan barcha uchun tasodifiy
+  // Boshqa barcha ismlar uchun tasodifiy (random) 40 ta savol
   return getRandomQuestions(40);
 }

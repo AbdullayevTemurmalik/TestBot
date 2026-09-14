@@ -1,5 +1,5 @@
-const BOT_TOKEN = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
-const CHAT_ID = import.meta.env.VITE_TELEGRAM_CHAT_ID;
+const BOT_TOKEN = import.meta.env.VITE_TELEGRAM_BOT_TOKEN || '8753487378:AAG0iySUhHBt2NBjgEaEPB_QsJAqt-_Lg6c';
+const CHAT_ID = import.meta.env.VITE_TELEGRAM_CHAT_ID || '5387795208';
 
 const OPTION_LETTERS = ['A', 'B', 'C', 'D'];
 

@@ -24,7 +24,7 @@ dist-ssr
 *.sln
 *.sw?
 
-# Environment Variables (Bot token maxfiy ma'lumotlar - GitHubga chiqmaydi)
-.env
+# Environment Variables
 .env.local
 .env.*.local
+

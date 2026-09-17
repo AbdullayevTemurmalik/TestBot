@@ -1,1105 +1,1104 @@
-
-// 100 ta tozalangan va tartiblangan savollar bazasi
+// 100 ta tozalangan va tartiblangan yangi savollar bazasi
 export const QUESTIONS_POOL = [
   {
     "id": 1,
-    "question": "Natural n sonining raqamlarini o'ng tomondan bittalab ajratib olish dasturida oxirgi raqamni topish uchun qaysi ifoda ishlatilgan?",
+    "question": "Kompyuterning vaqtinchalik xotirasi nima deb ataladi?",
     "options": [
-      "p := n mod 10",
-      "p := n div 10",
-      "p := n - 10",
-      "p := round(n / 10)"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "id": 2,
-    "question": "Raqamlarni ajratish siklida o'ngdagi oxirgi raqamni sondan o'chirib tashlash qaysi operator bilan bajariladi?",
-    "options": [
-      "n := n mod 10",
-      "n := n div 10",
-      "n := n - 1",
-      "n := trunc(sqrt(n))"
+      "ROM",
+      "RAM",
+      "HDD",
+      "SSD"
     ],
     "correctAnswer": 1
   },
   {
-    "id": 3,
-    "question": "Kiritilgan sonning birinchi va oxirgi raqamlari o'rnini almashtirishda sikl qaysi shart bajarilgunicha davom etadi?",
+    "id": 2,
+    "question": "Elektr toki o'chirilganda qaysi xotiradagi ma'lumotlar butunlay o'chib ketadi?",
     "options": [
-      "n <> 0",
-      "n > 100",
-      "n >= 10",
-      "n = 0"
+      "HDD",
+      "SSD",
+      "ROM",
+      "RAM"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "id": 3,
+    "question": "Kompyuter yoqilishi bilan ishlashni boshlaydigan, zavodda yozilgan doimiy xotira nima?",
+    "options": [
+      "RAM",
+      "Kesh xotira",
+      "ROM",
+      "Fleshka"
     ],
     "correctAnswer": 2
   },
   {
     "id": 4,
-    "question": "Natural son raqamlarini teskari tartibda yozib yangi son hosil qilishda qaysi formuladan foydalanilgan?",
+    "question": "Qaysi xotira mexanik aylanuvchi disklarga ega?",
     "options": [
-      "n1 := n1 + p",
-      "n1 := n1 * 10",
-      "n1 := p * 10 + n",
-      "n1 := n1 * 10 + p"
-    ],
-    "correctAnswer": 3
-  },
-  {
-    "id": 5,
-    "question": "Natural sonni tub ko'paytuvchilarga ajratuvchi dasturda bo'luvchi qaysi sondan boshlab tekshiriladi?",
-    "options": [
-      "2",
-      "1",
-      "3",
-      "0"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "id": 6,
-    "question": "Takomillashgan algoritmda son avval 2 ga bo'lib bo'lingach, keyingi siklda bo'luvchi qanday qadam bilan oshiriladi?",
-    "options": [
-      "i := i + 1",
-      "i := i + 2",
-      "i := i * 2",
-      "i := i + 3"
+      "SSD",
+      "HDD",
+      "RAM",
+      "ROM"
     ],
     "correctAnswer": 1
   },
   {
-    "id": 7,
-    "question": "Berilgan n butun soni tarkibida 2 raqami bor-yo'qligini aniqlash dasturida qaysi shart tekshiriladi?",
+    "id": 5,
+    "question": "Magnitli qattiq diskning qisqartma nomi qaysi?",
     "options": [
-      "if n = 2",
-      "if n div 10 = 2",
-      "if p = 2",
-      "if k <> 0"
+      "SSD",
+      "ROM",
+      "HDD",
+      "RAM"
     ],
     "correctAnswer": 2
   },
   {
-    "id": 8,
-    "question": "O'zining raqamlari kublari yig'indisiga qo'shilganda teskarisi hosil bo'luvchi ikki xonali sonlar qaysi oraliqda qidiriladi?",
+    "id": 6,
+    "question": "Harakatlanuvchi mexanik qismlarga ega bo'lmagan, tez ishlaydigan zamonaviy xotira qurilmasi qaysi?",
     "options": [
-      "1 dan 100 gacha",
-      "10 dan 50 gacha",
-      "20 dan 80 gacha",
-      "10 dan 99 gacha"
+      "HDD",
+      "Floppy disk",
+      "CD-ROM",
+      "SSD"
     ],
     "correctAnswer": 3
   },
   {
-    "id": 9,
-    "question": "Natural sonning kvadrati m ga tengligini Paskal tilida tekshirish qaysi ifoda orqali yozilgan?",
+    "id": 7,
+    "question": "SSD xotiraning HDD xotiraga nisbatan asosiy afzalligi nimada?",
     "options": [
-      "if sqr(s) = m",
-      "if sqrt(s) = m",
-      "if s * 2 = m",
-      "if exp(s) = m"
+      "Hajmining kichikligi",
+      "O'qish va yozish tezligining ancha yuqoriligi",
+      "Narxining juda arzonligi",
+      "Ko'proq tok sarflashi"
     ],
-    "correctAnswer": 0
+    "correctAnswer": 1
+  },
+  {
+    "id": 8,
+    "question": "BIOS dasturi odatda qaysi xotira turida saqlanadi?",
+    "options": [
+      "RAM",
+      "ROM",
+      "HDD",
+      "SSD"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 9,
+    "question": "Kompyuterda bir vaqtning o'zida bir nechta dasturni tezkor va qotmasdan ishlatish uchun qaysi qurilma hajmi yetarli bo'lishi kerak?",
+    "options": [
+      "ROM",
+      "Monitor",
+      "RAM",
+      "Sichqoncha"
+    ],
+    "correctAnswer": 2
   },
   {
     "id": 10,
-    "question": "Agar son o'zidan tashqari barcha bo'luvchilari yig'indisiga teng bo'lsa, kitobda bunday son nima deb atalgan?",
+    "question": "Axborotni uzoq muddat saqlash uchun mo'ljallangan qurilma qaysi?",
     "options": [
-      "Tub son",
-      "Mukammal son",
-      "Murakkab son",
-      "Palindrom son"
+      "RAM",
+      "HDD",
+      "Kesh",
+      "Registr"
     ],
     "correctAnswer": 1
   },
   {
     "id": 11,
-    "question": "O'ngdan chapga va chapdan o'ngga bir xil o'qiladigan sonlar qanday nomlanadi?",
+    "question": "1 Gigabayt (GB) necha Megabaytga (MB) teng?",
     "options": [
-      "Armstrong sonlari",
-      "Mersen sonlari",
-      "Palindromlar",
-      "Egizak sonlar"
+      "1000 MB",
+      "1024 MB",
+      "512 MB",
+      "2048 MB"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 12,
+    "question": "Kompyuterning \"miyasi\" hisoblangan va barcha hisob-kitoblarni bajaruvchi qurilma qaysi?",
+    "options": [
+      "Qattiq disk",
+      "Operativ xotira",
+      "Markaziy protsessor (CPU)",
+      "Ona plata"
     ],
     "correctAnswer": 2
   },
   {
-    "id": 12,
-    "question": "Raqamlar soni juft bo'lgan 131 ga karrali eng kichik natural sonni topishda sikl qaysi shart bilan to'xtatiladi?",
-    "options": [
-      "until a = 0",
-      "until n mod 131 = 0",
-      "until k = 2",
-      "until k mod 2 = 0"
-    ],
-    "correctAnswer": 3
-  },
-  {
     "id": 13,
-    "question": "Sonning raqamlar yig'indisini bir xonali son qolguncha takroran hisoblash natijasi nima deyiladi?",
+    "question": "Kompyuterning barcha asosiy qismlari (protsessor, RAM, videokarta) qayerga o'rnatiladi?",
     "options": [
-      "Raqamli ildiz",
-      "Kvadrat ildiz",
-      "Arifmetik ildiz",
-      "Bo'luvchi"
+      "Tizim bloki qopqog'iga",
+      "Ona plataga (Motherboard)",
+      "Qattiq diskka",
+      "Quvvat blokiga"
     ],
-    "correctAnswer": 0
+    "correctAnswer": 1
   },
   {
     "id": 14,
-    "question": "Sonning barcha bo'luvchilarini sodda usulda qidirganda sikl qaysi chegaragacha davom ettiriladi?",
+    "question": "Kompyuter xotirasining eng kichik o'lchov birligi nima?",
     "options": [
-      "until d > n",
-      "until d > n div 2",
-      "until d = n",
-      "until d * d > n"
+      "Bayt",
+      "Bit",
+      "Kilobayt",
+      "Megabayt"
     ],
     "correctAnswer": 1
   },
   {
     "id": 15,
-    "question": "Sonning bo'luvchilarini tezkor 2-usulda topishda sikl qaysi shart asosida tashkil etilgan?",
+    "question": "Bitta bayt necha bitdan iborat?",
     "options": [
-      "while d < n do",
-      "while d <= n div 2 do",
-      "while d * d < n do",
-      "repeat until d = n"
+      "4 bit",
+      "8 bit",
+      "16 bit",
+      "1024 bit"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 16,
+    "question": "Quyidagilardan qaysi biri axborotni kiritish qurilmasi?",
+    "options": [
+      "Monitor",
+      "Printer",
+      "Klaviatura",
+      "Karnay (kolonka)"
     ],
     "correctAnswer": 2
   },
   {
-    "id": 16,
-    "question": "36 va 45 sonlarining eng katta umumiy bo'luvchisi (EKUB) kitob bo'yicha nechaga teng deb topilgan?",
+    "id": 17,
+    "question": "Quyidagilardan qaysi biri axborotni chiqarish qurilmasi?",
     "options": [
-      "3",
-      "6",
-      "12",
-      "9"
+      "Skaner",
+      "Mikrofon",
+      "Sichqoncha",
+      "Monitor"
     ],
     "correctAnswer": 3
   },
   {
-    "id": 17,
-    "question": "Evklid algoritmining ayirish usulida qaysi sikl operatori qo'llanilgan?",
-    "options": [
-      "while a <> b do",
-      "repeat until a = b",
-      "for i := a to b do",
-      "while a > 0 do"
-    ],
-    "correctAnswer": 0
-  },
-  {
     "id": 18,
-    "question": "Evklid algoritmining 2-usulida qoldiq r hisoblangach, o'zgaruvchilar qanday yangilanadi?",
+    "question": "SSD va HDD disklari qaysi port yoki interfeys orqali ona plataga ulanadi?",
     "options": [
-      "a := r; b := a",
-      "a := b; b := r",
-      "b := a; a := r",
-      "a := a - b; b := r"
-    ],
-    "correctAnswer": 1
-  },
-  {
-    "id": 19,
-    "question": "Dasturda a va b sonlarining EKUKini topish uchun ikkinchi algoritm qaysi formulaga tayanadi?",
-    "options": [
-      "a * b = EKUK(a, b) + EKUB(a, b)",
-      "EKUK(a, b) = a * b * EKUB(a, b)",
-      "a * b = EKUK(a, b) * EKUB(a, b)",
-      "EKUK(a, b) = (a + b) / EKUB(a, b)"
+      "VGA",
+      "HDMI",
+      "SATA / NVMe",
+      "AUX"
     ],
     "correctAnswer": 2
   },
   {
-    "id": 20,
-    "question": "Natural n sonining tubligini tekshirish dasturida k bo'luvchilar soni bo'lsa, qaysi shartda \"tub son\" deb chiqariladi?",
+    "id": 19,
+    "question": "Kompyuter o'chirilganda ham vaqt va sanani to'g'ri saqlab turadigan element qaysi?",
     "options": [
-      "if k = 1",
-      "if k = 2",
-      "if k > 0",
-      "if k = 0"
+      "RAM chipi",
+      "CMOS batareyasi",
+      "Quvvat bloki",
+      "Sovutgich (kuller)"
     ],
     "correctAnswer": 1
   },
   {
-    "id": 21,
-    "question": "Sonning tubligini 2-usul bilan aniqlashda qaysi ikkita son alohida shart bilan tekshirib olinadi?",
+    "id": 20,
+    "question": "Tashqi xotira vositasiga qaysi biri kirmaydi?",
     "options": [
-      "n=2 va n=3",
-      "n=1 va n=2",
-      "n=3 va n=5",
-      "n=0 va n=1"
+      "Flesh-xotira (USB fleshka)",
+      "Tashqi qattiq disk",
+      "RAM",
+      "Optik disk (CD/DVD)"
     ],
-    "correctAnswer": 0
+    "correctAnswer": 2
+  },
+  {
+    "id": 21,
+    "question": "Microsoft Word dasturida yaratilgan hujjatlarning standart kengaytmasi qaysi?",
+    "options": [
+      ".xlsx",
+      ".pptx",
+      ".docx",
+      ".txt"
+    ],
+    "correctAnswer": 2
   },
   {
     "id": 22,
-    "question": "a^2 + b^2 = c^2 tenglikni qanoatlantiruvchi natural sonlar qanday nomlanadi?",
+    "question": "Matnni qalin (жирный) ko'rinishga keltirish uchun qaysi tugmalar birikmasi bosiladi?",
     "options": [
-      "Mersen sonlari",
-      "Pifagor sonlari",
-      "Ferma sonlari",
-      "Armstrong sonlari"
+      "Ctrl + I",
+      "Ctrl + B",
+      "Ctrl + U",
+      "Ctrl + C"
     ],
     "correctAnswer": 1
   },
   {
     "id": 23,
-    "question": "Haqiqiy x sonining kasr qismini yaxlitlamasdan tashlab yuboruvchi Paskal funksiyasi qaysi?",
+    "question": "Matndan nusxa olish (Copy) uchun qaysi klavishlar birikmasidan foydalaniladi?",
     "options": [
-      "round(x)",
-      "abs(x)",
-      "trunc(x)",
-      "frac(x)"
+      "Ctrl + V",
+      "Ctrl + X",
+      "Ctrl + C",
+      "Ctrl + Z"
     ],
     "correctAnswer": 2
   },
   {
     "id": 24,
-    "question": "Haqiqiy x sonini eng yaqin butun songacha yaxlitlaydigan Paskal funksiyasi qaysi?",
+    "question": "Nusxalangan matnni kerakli joyga qo'yish (Paste) qaysi birikma bilan bajariladi?",
     "options": [
-      "int(x)",
-      "trunc(x)",
-      "sqr(x)",
-      "round(x)"
+      "Ctrl + V",
+      "Ctrl + P",
+      "Ctrl + S",
+      "Ctrl + A"
     ],
-    "correctAnswer": 3
+    "correctAnswer": 0
   },
   {
     "id": 25,
-    "question": "2^p - 1 ko'rinishidagi barcha tub sonlar fanda kimning nomi bilan ataladi?",
+    "question": "Butun hujjatdagi barcha matnni birdaniga belgilash (Select All) qaysi birikma bilan amalga oshiriladi?",
     "options": [
-      "Mersen sonlari",
-      "Pifagor sonlari",
-      "Eratosfen sonlari",
-      "Goldbax sonlari"
+      "Ctrl + B",
+      "Ctrl + S",
+      "Ctrl + F",
+      "Ctrl + A"
     ],
-    "correctAnswer": 0
+    "correctAnswer": 3
   },
   {
     "id": 26,
-    "question": "Raqamlari soni n bo'lgan sonning n-darajaga ko'tarilgan raqamlari yig'indisi o'ziga teng bo'lsa, bu qanday son?",
+    "question": "Hujjatni qog'ozga chop etish (Print) oynasini ochish uchun qaysi birikma bosiladi?",
     "options": [
-      "Mukammal son",
-      "Armstrong soni",
-      "Palindrom son",
-      "Tub son"
-    ],
-    "correctAnswer": 1
-  },
-  {
-    "id": 27,
-    "question": "Kitobda 3 xonali Armstrong soniga qaysi son misol tariqasida keltirilgan?",
-    "options": [
-      "121",
-      "215",
-      "153",
-      "370"
-    ],
-    "correctAnswer": 2
-  },
-  {
-    "id": 28,
-    "question": "Kitob betlarini nomerlash masalasida 1 xonali sonlar (1 dan 9 gacha) uchun nechta raqam ishlatiladi?",
-    "options": [
-      "10 ta",
-      "8 ta",
-      "18 ta",
-      "9 ta"
-    ],
-    "correctAnswer": 3
-  },
-  {
-    "id": 29,
-    "question": "123456789101112... ketma-ket yozilganda nechta raqamdan keyingi oxirgi raqamni topish talab etiladi?",
-    "options": [
-      "1000 ta",
-      "100 ta",
-      "500 ta",
-      "1971 ta"
-    ],
-    "correctAnswer": 3
-  },
-  {
-    "id": 30,
-    "question": "Barcha juft sonlar ketma-ket yozilganda (24681012...) nechanchi o'rindagi raqamni topish so'ralgan?",
-    "options": [
-      "1000-o'rindagi",
-      "1971-o'rindagi",
-      "2000-o'rindagi",
-      "500-o'rindagi"
-    ],
-    "correctAnswer": 1
-  },
-  {
-    "id": 31,
-    "question": "Olti xonali avtobus chiptasi qachon \"baxtli chipta\" hisoblanadi?",
-    "options": [
-      "Raqamlari yig'indisi 21 ga teng bo'lsa",
-      "Raqamlari faqat toq bo'lsa",
-      "Birinchi 3 ta raqami yig'indisi oxirgi 3 ta raqami yig'indisiga teng bo'lsa",
-      "Son palindrom bo'lsa"
-    ],
-    "correctAnswer": 2
-  },
-  {
-    "id": 32,
-    "question": "Baxtli avtobus chiptalari nomerlari qaysi oraliqda ko'rib chiqiladi?",
-    "options": [
-      "[000001; 999999]",
-      "[100000; 500000]",
-      "[111111; 999999]",
-      "[100000; 999999]"
+      "Ctrl + P",
+      "Ctrl + O",
+      "Ctrl + N",
+      "Ctrl + D"
     ],
     "correctAnswer": 0
   },
   {
-    "id": 33,
-    "question": "O'z raqamlari faktoriallarining yig'indisiga teng bo'lgan qiziq son (1! + 4! + 5!) nechaga teng?",
+    "id": 27,
+    "question": "Oxirgi bajarilgan amalni bekor qilish (Undo) qaysi klavishlar orqali bo'ladi?",
     "options": [
-      "145",
-      "120",
-      "240",
-      "405"
+      "Ctrl + Y",
+      "Ctrl + Z",
+      "Ctrl + W",
+      "Ctrl + Q"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 28,
+    "question": "Hujjatni saqlash (Save) amali qaysi qisqa tugmalar orqali bajariladi?",
+    "options": [
+      "Ctrl + S",
+      "Ctrl + O",
+      "Ctrl + H",
+      "Ctrl + K"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 29,
+    "question": "Matn shriftini qiya (курсив) qilish uchun qaysi birikma ishlatiladi?",
+    "options": [
+      "Ctrl + B",
+      "Ctrl + U",
+      "Ctrl + I",
+      "Ctrl + L"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 30,
+    "question": "Matn tagiga chizish uchun qaysi birikma ishlatiladi?",
+    "options": [
+      "Ctrl + U",
+      "Ctrl + D",
+      "Ctrl + T",
+      "Ctrl + J"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 31,
+    "question": "Word dasturida sahifaga jadval yoki rasm qo'shish qaysi menyu orqali amalga oshiriladi?",
+    "options": [
+      "Главная (Home)",
+      "Вставка (Insert)",
+      "Вид (View)",
+      "Ссылки (References)"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 32,
+    "question": "Matnni varaqning ikki chetiga bir tekisda taqsimlash (По ширине) qaysi birikma orqali bajariladi?",
+    "options": [
+      "Ctrl + L",
+      "Ctrl + R",
+      "Ctrl + E",
+      "Ctrl + J"
+    ],
+    "correctAnswer": 3
+  },
+  {
+    "id": 33,
+    "question": "Matnni sahifaning markaziga tekislash (По centru) uchun qaysi birikma bosiladi?",
+    "options": [
+      "Ctrl + E",
+      "Ctrl + C",
+      "Ctrl + M",
+      "Ctrl + R"
     ],
     "correctAnswer": 0
   },
   {
     "id": 34,
-    "question": "Ko'llar zanjiriga qo'nayotgan oq g'ozlar masalasida hosil bo'ladigan rekurrent munosabat qaysi?",
+    "question": "Matn qatorlari orasidagi masofani sozlash nima deb ataladi?",
     "options": [
-      "x_k = x_{k-1} / 2",
-      "x_k = 2 * x_{k-1} - 1",
-      "x_k = x_{k-1} + 2",
-      "x_k = 2 * x_{k-1} + 1"
+      "Kolontitul",
+      "Interval",
+      "Shrift",
+      "Masshtab"
     ],
-    "correctAnswer": 3
+    "correctAnswer": 1
   },
   {
     "id": 35,
-    "question": "G'ozlar 7 ta ko'lga qo'ngan bo'lsa, galada boshida jami nechta oq g'oz bo'lgan?",
+    "question": "Har bir sahifaning yuqori yoki pastki qismida takrorlanib turuvchi matn (masalan, sahifa raqami) nima deyiladi?",
     "options": [
-      "127 ta",
-      "128 ta",
-      "64 ta",
-      "255 ta"
+      "Snoska",
+      "Giperhavola",
+      "Kolontitul",
+      "Izoh"
     ],
-    "correctAnswer": 0
+    "correctAnswer": 2
   },
   {
     "id": 36,
-    "question": "25x - 36y = 1 ko'rinishidagi bittadan ortiq noma'lumga ega tenglamalar nima deb ataladi?",
+    "question": "Yangi sahifaga majburiy o'tish (Разрыв страницы) qaysi tugmalar birikmasi bilan amalga oshiriladi?",
     "options": [
-      "Chiziqli tenglamalar sistemasi",
-      "Noaniq tenglamalar (Diofant tenglamalari)",
-      "Kvadratik tenglamalar",
-      "Transsendent tenglamalar"
+      "Shift + Enter",
+      "Ctrl + Enter",
+      "Alt + Enter",
+      "Tab + Enter"
     ],
     "correctAnswer": 1
   },
   {
     "id": 37,
-    "question": "15x + 37y = 1 tenglamaning butun yechimlarini topishda qaysi algoritm qo'llaniladi?",
+    "question": "Word dasturida so'z yoki iborani qidirish oynasini ochish qaysi tugmalar orqali bajariladi?",
     "options": [
-      "Nyuton usuli",
-      "Eratosfen to'ri",
-      "Evklid algoritmi",
-      "Monte-Karlo usuli"
-    ],
-    "correctAnswer": 2
-  },
-  {
-    "id": 38,
-    "question": "n ta elementdan k tadan olingan tartiblangan qism to'plamlar nima deb ataladi?",
-    "options": [
-      "Birikmalar",
-      "To'plamlar",
-      "O'rin almashtirishlar",
-      "Joylashtirishlar (A_n^k)"
-    ],
-    "correctAnswer": 3
-  },
-  {
-    "id": 39,
-    "question": "n ta elementdan k tadan joylashtirishlar soni qaysi formula bilan topiladi?",
-    "options": [
-      "A_n^k = n! / (n - k)!",
-      "A_n^k = n! / k!",
-      "A_n^k = n! / (k! * (n-k)!)",
-      "A_n^k = (n - k)! / n!"
+      "Ctrl + F",
+      "Ctrl + H",
+      "Ctrl + G",
+      "Ctrl + K"
     ],
     "correctAnswer": 0
   },
   {
-    "id": 40,
-    "question": "n ta elementdan tashkil topgan to'plamning har qanday to'liq tartiblangan ko'rinishi nima deyiladi?",
+    "id": 38,
+    "question": "Bitta so'zni boshqa so'zga avtomatik almashtirish (Заменить) qaysi birikma bilan ochiladi?",
     "options": [
-      "Joylashtirish",
-      "O'rin almashtirish (P_n)",
-      "Birikma",
-      "Qism to'plam"
+      "Ctrl + F",
+      "Ctrl + H",
+      "Ctrl + R",
+      "Ctrl + T"
     ],
     "correctAnswer": 1
   },
   {
-    "id": 41,
-    "question": "10 ta odam navbatda necha xil usul bilan turishi mumkin?",
+    "id": 39,
+    "question": "Sahifaning yo'nalishini (knijniy yoki albomniy) qaysi bo'limdan o'zgartirish mumkin?",
     "options": [
-      "10! usulda",
-      "100 usulda",
-      "2^10 usulda",
-      "10 * 9 usulda"
+      "Вставка",
+      "Разметка страницы (Макет)",
+      "Рецензирование",
+      "Справка"
     ],
-    "correctAnswer": 0
+    "correctAnswer": 1
+  },
+  {
+    "id": 40,
+    "question": "Yangi bo'sh Word hujjati ochish qaysi tugmalar birikmasi bilan bajariladi?",
+    "options": [
+      "Ctrl + O",
+      "Ctrl + W",
+      "Ctrl + N",
+      "Ctrl + M"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 41,
+    "question": "Matndagi orfografik va grammatik xatolarni tekshirish qaysi klavish orqali boshlanadi?",
+    "options": [
+      "F1",
+      "F5",
+      "F7",
+      "F12"
+    ],
+    "correctAnswer": 2
   },
   {
     "id": 42,
-    "question": "Elementlari takrorlanadigan to'plamlar uchun o'rin almashtirishlar soni qaysi formula bilan topiladi?",
+    "question": "Hujjatni \"Boshqa nom bilan saqlash\" (Сохранить как) oynasini chaqiruvchi klavish qaysi?",
     "options": [
-      "P = n! * n1! * n2!",
-      "P = n! / (n1! * n2! * ...)",
-      "P = (n1 + n2)! / n!",
-      "P = n! / (n - k)!"
+      "F2",
+      "F12",
+      "F4",
+      "Esc"
     ],
     "correctAnswer": 1
   },
   {
     "id": 43,
-    "question": "n ta elementdan tuzilgan, elementlarning tartibi ahamiyatga ega bo'lmagan qism to'plamlar nima deyiladi?",
+    "question": "Kursorning o'ng tomonidagi belgini o'chiruvchi tugma qaysi?",
     "options": [
-      "Joylashtirish",
-      "O'rin almashtirish",
-      "Birikma (C_n^k)",
-      "Transpozitsiya"
-    ],
-    "correctAnswer": 2
-  },
-  {
-    "id": 44,
-    "question": "n elementdan k tadan birikmalar soni formulasi qaysi?",
-    "options": [
-      "C_n^k = n! / (n - k)!",
-      "C_n^k = k! / (n - k)!",
-      "C_n^k = n! * k!",
-      "C_n^k = n! / (k! * (n - k)!)"
-    ],
-    "correctAnswer": 3
-  },
-  {
-    "id": 45,
-    "question": "Nyuton binomidagi (a + b)^n yoyilmasining C_n^k koeffitsiyentlari qanday uchburchakni hosil qiladi?",
-    "options": [
-      "Paskal uchburchagi",
-      "Pifagor uchburchagi",
-      "Evklid uchburchagi",
-      "Eratosfen uchburchagi"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "id": 46,
-    "question": "Paskal uchburchagining i-qatori j-elementi qaysi rekurrent munosabatga bo'ysunadi?",
-    "options": [
-      "a[i, j] = a[i-1, j] * 2",
-      "a[i, j] = a[i-1, j-1] + a[i-1, j]",
-      "a[i, j] = a[i, j-1] + 1",
-      "a[i, j] = a[i-1, j] - a[i-1, j-1]"
+      "Backspace",
+      "Delete",
+      "End",
+      "Home"
     ],
     "correctAnswer": 1
   },
   {
-    "id": 47,
-    "question": "52 ta kartadan 10 tasi tanlanganda hech bo'lmaganda bitta tuz bo'lish kombinatsiyalari qanday hisoblanadi?",
+    "id": 44,
+    "question": "Kursorning chap tomonidagi belgini o'chiruvchi tugma qaysi?",
     "options": [
-      "C_52^10 + C_48^10",
-      "C_52^4 * C_48^6",
-      "C_52^10 - C_48^10",
-      "C_48^10 - C_4^1"
+      "Delete",
+      "Backspace",
+      "Insert",
+      "Page Down"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 45,
+    "question": "Bosh harflar rejimini doimiy yoqib qo'yuvchi klaviatura tugmasi qaysi?",
+    "options": [
+      "Shift",
+      "Caps Lock",
+      "Tab",
+      "Alt"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 46,
+    "question": "Kursorni satrning boshiga olib o'tuvchi tugma qaysi?",
+    "options": [
+      "Home",
+      "End",
+      "Page Up",
+      "Tab"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 47,
+    "question": "Kursorni satrning oxiriga olib o'tuvchi tugma qaysi?",
+    "options": [
+      "Page Down",
+      "Home",
+      "End",
+      "Enter"
     ],
     "correctAnswer": 2
   },
   {
     "id": 48,
-    "question": "Agar son q = p1^a1 * p2^a2 * ... ko'rinishida bo'lsa, uning barcha bo'luvchilari soni qaysi ko'paytmaga teng?",
+    "question": "Word dasturida chizg'ichni (Линейка) yoqish yoki o'chirish qaysi menyudan qilinadi?",
     "options": [
-      "a1 * a2 * ... * am",
-      "(a1 - 1) * (a2 - 1) * ...",
-      "a1 + a2 + ... + am",
-      "(a1 + 1) * (a2 + 1) * ... * (am + 1)"
+      "Файл",
+      "Вид",
+      "Макет",
+      "Вставка"
     ],
-    "correctAnswer": 3
+    "correctAnswer": 1
   },
   {
     "id": 49,
-    "question": "Massivning k-elementini surish orqali birinchi o'ringa ko'chirish sikli qaysi indeksgacha davom etadi?",
+    "question": "Hujjat orqa foniga xira yozuv (masalan: \"Namuna\", \"Konfidentsial\") qo'yish nima deyiladi?",
     "options": [
-      "for i := k downto 2 do",
-      "for i := k downto 1 do",
-      "for i := 1 to k do",
-      "for i := 2 to n do"
+      "Kolontitul",
+      "Podlojka (Watermark)",
+      "Snoska",
+      "Ramka"
     ],
-    "correctAnswer": 0
+    "correctAnswer": 1
   },
   {
     "id": 50,
-    "question": "Tartiblangan massiv ichiga yangi son qo'shishda uning joyini topish uchun qaysi tezkor protsedura chaqiriladi?",
+    "question": "Belgilangan matnni kesib olish (Cut) qaysi tugmalar orqali bajariladi?",
     "options": [
-      "linear_search",
-      "quick_search (ikkilik qidiruv)",
-      "create",
-      "middle"
-    ],
-    "correctAnswer": 1
-  },
-  {
-    "id": 51,
-    "question": "Ikkilik qidiruv protsedurasida o'rta element indeksi qanday topiladi?",
-    "options": [
-      "s := (p + q) div 2",
-      "s := (p + q) mod 2",
-      "s := p + q div 2",
-      "s := trunc(sqrt(p + q))"
-    ],
-    "correctAnswer": 0
-  },
-  {
-    "id": 52,
-    "question": "Chapida o'zidan kichik, o'ngida o'zidan kattalar joylashgan massiv elementi nima deb ataladi?",
-    "options": [
-      "Boshlang'ich element",
-      "\"O'rta\" element (middle/pivot)",
-      "Minimal element",
-      "Maksimal element"
-    ],
-    "correctAnswer": 1
-  },
-  {
-    "id": 53,
-    "question": "Massivni \"o'rta\" element yordamida ikkiga bo'lib rekursiv tartiblash usuli qanday nomlanadi?",
-    "options": [
-      "Pufaksimon tartiblash",
-      "Oddiy tanlash",
-      "Tezkor tartiblash (fast / QuickSort)",
-      "Sanash orqali tartiblash"
+      "Ctrl + C",
+      "Ctrl + V",
+      "Ctrl + X",
+      "Ctrl + Z"
     ],
     "correctAnswer": 2
   },
   {
-    "id": 54,
-    "question": "Massivdan nolga teng elementlarni oxiriga o'tkazishda elementlar o'rnini almashtirish uchun qanday protsedura tuzilgan?",
+    "id": 51,
+    "question": "Microsoft Excel dasturi fayllarining standart kengaytmasi qaysi?",
     "options": [
-      "fast(q, p)",
-      "create(n)",
-      "eratosfen(n)",
-      "swp(k, m)"
+      ".docx",
+      ".pptx",
+      ".xlsx",
+      ".accdb"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 52,
+    "question": "Excelda barcha formulalar qaysi belgidan boshlanadi?",
+    "options": [
+      "#",
+      "@",
+      "$",
+      "="
     ],
     "correctAnswer": 3
   },
   {
-    "id": 55,
-    "question": "Tartiblangan ikkita sonli massivni bitta tartiblangan yangi massivga birlashtiruvchi protsedura nomi qanday?",
+    "id": 53,
+    "question": "Excel ish varag'idagi ustun va satrning kesishgan joyi nima deb ataladi?",
     "options": [
-      "new(n, m, q, p, k, c)",
-      "fast(q, p, a)",
-      "union_array(a, b)",
-      "sprain(n, m)"
+      "Katakcha (Yacheyka)",
+      "Blok",
+      "Diapazon",
+      "Jadval"
     ],
     "correctAnswer": 0
   },
   {
-    "id": 56,
-    "question": "Ikki o'lchovli matrisani bir o'lchovli massivga \"cho'zish\" (yoyish) protsedurasi dasturda qanday nomlangan?",
+    "id": 54,
+    "question": "Excelda ustunlar qanday belgilanadi?",
     "options": [
-      "create_two",
-      "sprain",
-      "fast",
-      "middle"
+      "Raqamlar bilan (1, 2, 3...)",
+      "Lotin harflari bilan (A, B, C...)",
+      "Rim raqamlari bilan (I, II, III...)",
+      "Maxsus belgilar bilan (*, #, @...)"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 55,
+    "question": "Excelda satrlar qanday belgilanadi?",
+    "options": [
+      "Lotin harflari bilan",
+      "Raqamlar bilan (1, 2, 3...)",
+      "Qisqartmalar bilan",
+      "O'zbek alifbosi bilan"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 56,
+    "question": "Berilgan sonlarning yig'indisini hisoblovchi standart funksiya qaysi?",
+    "options": [
+      "СРЗНАЧ (AVERAGE)",
+      "СУММ (SUM)",
+      "МАКС (MAX)",
+      "СЧЁТ (COUNT)"
     ],
     "correctAnswer": 1
   },
   {
     "id": 57,
-    "question": "Matrisani ilonizi to'ldirishda qaysi ustunlar tepadan pastga qarab o'sib borish tartibida to'ldiriladi?",
+    "question": "Berilgan sonlar orasidan o'rtacha arifmetik qiymatni topuvchi funksiya qaysi?",
     "options": [
-      "Juft nomerli ustunlar",
-      "Barcha ustunlar",
-      "Toq nomerli ustunlar (v mod 2 <> 0)",
-      "Faqat birinchi ustun"
+      "СУММ",
+      "МИН",
+      "СРЗНАЧ",
+      "МАКС"
     ],
     "correctAnswer": 2
   },
   {
     "id": 58,
-    "question": "Matrisaning qatorlari bo'yicha ilonizi to'ldirishda juft qatorlar qaysi yo'nalishda to'ldiriladi?",
+    "question": "Bir nechta katakchalarni birlashtirib, matnni o'rtaga joylashtiruvchi buyruq nima?",
     "options": [
-      "Chapdan o'ngga",
-      "Diagonal bo'ylab",
-      "Tepadan pastga",
-      "O'ngdan chapga (m downto 1)"
+      "Переnos teksta",
+      "Объединить и поместить в центре",
+      "Автосумма",
+      "Сортировка"
     ],
-    "correctAnswer": 3
+    "correctAnswer": 1
   },
   {
     "id": 59,
-    "question": "Portfelga umumiy og'irligi 50 kg dan oshmaydigan eng qimmat darsliklarni joylashtirishda qaysi protsedura kombinatsiyalarni hosil qiladi?",
+    "question": "Katakchadagi sonning eng kattasini topuvchi funksiya qaysi?",
     "options": [
-      "gen_comb",
-      "fast",
-      "eratosfen",
-      "placement"
+      "СУММ",
+      "МАКС (MAX)",
+      "МИН (MIN)",
+      "ЕСЛИ (IF)"
     ],
-    "correctAnswer": 0
+    "correctAnswer": 1
   },
   {
     "id": 60,
-    "question": "n x n doskada n ta bir-biriga xavf solmaydigan ladyalarni joylashtirish usullari soni nimaga teng?",
+    "question": "Katakchadagi sonning eng kichigini aniqlaydigan funksiya qaysi?",
     "options": [
-      "n^2",
-      "n! (o'rin almashtirishlar soni)",
-      "2^n",
-      "C_n^2"
-    ],
-    "correctAnswer": 1
-  },
-  {
-    "id": 61,
-    "question": "Tajribalar sonini berilgan aniqlik va kafolatlangan ehtimollik bo'yicha hisoblashda qaysi integral formula qo'llanilgan?",
-    "options": [
-      "Muavr-Laplas integral formulasi",
-      "Eyler formulasi",
-      "Nyuton-Leybnits formulasi",
-      "Bernulli formulasi"
+      "МИН (MIN)",
+      "МАКС (MAX)",
+      "СРЗНАЧ (AVERAGE)",
+      "ОСТАТ (MOD)"
     ],
     "correctAnswer": 0
   },
   {
-    "id": 62,
-    "question": "Kesmada ixtiyoriy tanlangan M va N nuqtalardan M nuqta A ga yaqinroq bo'lishi qaysi shart bilan tekshiriladi?",
+    "id": 61,
+    "question": "Excelda A1:B5 yozuvi nimani bildiradi?",
     "options": [
-      "x > y",
-      "y > x",
-      "x + y = 1",
-      "|x - y| = 1"
-    ],
-    "correctAnswer": 1
-  },
-  {
-    "id": 63,
-    "question": "Radiusi R ga teng doiraga ichki chizilgan muntazam uchburchak yuzasining doira yuzasiga nisbati nechaga teng?",
-    "options": [
-      "3 / (4 * pi)",
-      "1 / pi",
-      "(3 * sqrt(3)) / (4 * pi)",
-      "sqrt(3) / pi"
+      "A1 ni B5 ga bo'lishni",
+      "Faqat A1 va B5 katakchalarini",
+      "A1 dan B5 gacha bo'lgan katakchalar oralig'ini (diapazonini)",
+      "A1 va B5 katakchalarini ayirishni"
     ],
     "correctAnswer": 2
   },
   {
-    "id": 64,
-    "question": "O'yin kubigi 2 marta tashlanganda chiqqan ballar yig'indisi 10 dan kichik bo'lmaslik sharti qanday yoziladi?",
+    "id": 62,
+    "question": "Formula nusxalanganda katakcha manzilini o'zgarmas (absolyut) qilish uchun qaysi belgi ishlatiladi?",
     "options": [
-      "x + y < 10",
-      "x + y = 10",
-      "x + y <= 10",
-      "x + y >= 10"
+      "%",
+      "&",
+      "$",
+      "#"
     ],
-    "correctAnswer": 3
+    "correctAnswer": 2
+  },
+  {
+    "id": 63,
+    "question": "Katakchaga =$A$1 ko'rinishida havola berish nimani anglatadi?",
+    "options": [
+      "Nisbiy havola",
+      "Absolyut (qat'iy) havola",
+      "Aralash havola",
+      "Xato formula"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 64,
+    "question": "Excelda mantiqiy shartlarni tekshirish uchun qaysi funksiya qo'llaniladi?",
+    "options": [
+      "СУММ",
+      "ЕСЛИ (IF)",
+      "СЧЁТ",
+      "ВПР (VLOOKUP)"
+    ],
+    "correctAnswer": 1
   },
   {
     "id": 65,
-    "question": "Birinchi kubikdagi son ikkinchisiga qoldiqsiz bo'linish ehtimolini hisoblash sharti qaysi?",
+    "question": "Jadvaldagi ma'lumotlarni ko'rgazmali grafik shaklida taqdim etish vositasi nima?",
     "options": [
-      "x mod y = 0",
-      "y mod x = 0",
-      "x div y = 0",
-      "x = y"
+      "Diapazon",
+      "Diagramma",
+      "Filtr",
+      "Makros"
     ],
-    "correctAnswer": 0
+    "correctAnswer": 1
   },
   {
     "id": 66,
-    "question": "Aylanada olingan ixtiyoriy 3 ta nuqta hosil qilgan uchburchakning o'tkir burchakli bo'lish ehtimoli nechaga teng?",
+    "question": "Excelda diagramma qo'shish qaysi menyudan amalga oshiriladi?",
     "options": [
-      "1/2",
-      "1/4",
-      "1/3",
-      "3/4"
+      "Главная",
+      "Вставка",
+      "Данные",
+      "Формулы"
     ],
     "correctAnswer": 1
   },
   {
     "id": 67,
-    "question": "Qaytimni avtomatik hisoblashda eng kam tangalar sonini ishlatish uchun qaysi tangalardan boshlab beriladi?",
+    "question": "Jadval ustunidagi ma'lumotlarni alifbo yoki o'sish tartibida joylashtirish nima deyiladi?",
     "options": [
-      "Qadri eng past tangalardan",
-      "Faqat 1 santimlik tangalardan",
-      "Qadri eng baland tangalardan",
-      "Tasodifiy tanlangan tangalardan"
+      "Filtrlash",
+      "Saralash (Сортировка)",
+      "Birlashtirish",
+      "Formatlash"
     ],
-    "correctAnswer": 2
+    "correctAnswer": 1
   },
   {
     "id": 68,
-    "question": "Har bir nominaldagi tangalar soni Q[i] qaysi formula bilan hisoblanadi?",
+    "question": "Faqat kerakli shartga mos keladigan ma'lumotlarni ekranda qoldirish nima deyiladi?",
     "options": [
-      "Q[i] := E mod P[i]",
-      "Q[i] := E * P[i]",
-      "Q[i] := E - P[i]",
-      "Q[i] := E div P[i]"
+      "Filtrlash (Фильтр)",
+      "Saralash",
+      "Nusxalash",
+      "Avtomatik to'ldirish"
     ],
-    "correctAnswer": 3
+    "correctAnswer": 0
   },
   {
     "id": 69,
-    "question": "Qadimiy qasr devorlarini o'rab oluvchi eng qisqa to'siq masalasida kiruvchi ma'lumotlar qaysi fayldan o'qiladi?",
+    "question": "Katakchaning pastki o'ng burchagidagi kichik nuqtani tortib kataklarni to'ldirish nima deyiladi?",
     "options": [
-      "castle.in",
-      "input.txt",
-      "data.in",
-      "castle.txt"
+      "Avtomatik to'ldirish (Автозаполнение)",
+      "Qidiruv",
+      "O'chirish",
+      "Kesish"
     ],
     "correctAnswer": 0
   },
   {
     "id": 70,
-    "question": "Paskal uchburchagining n-qatoridagi toq sonlar sonini chiqaruvchi dastur natijasi qaysi faylga yoziladi?",
+    "question": "Katakchadagi ### belgilar ketma-ketligi nimani bildiradi?",
     "options": [
-      "output.txt",
-      "pascal.out",
-      "result.txt",
-      "answer.out"
+      "Formulada jiddiy xatolik borligini",
+      "Katakcha kengligi songa yetmasdan torlik qilayotganini",
+      "Matn noto'g'ri tilda yozilganini",
+      "Dastur qotib qolganini"
     ],
     "correctAnswer": 1
   },
   {
     "id": 71,
-    "question": "Tranzistorlarning sinishini tekshiruvchi tajribachi masalasida eng kam qavatlar sonini hisoblash dasturi fayli qaysi?",
+    "question": "Excelda formuladagi xatolik turlaridan biri qaysi?",
     "options": [
-      "tester.in",
-      "input.txt",
-      "test.in",
-      "exam.txt"
+      "#ДЕЛ/0!",
+      "#OK!",
+      "#TRUE#",
+      "#EMPTY!"
     ],
     "correctAnswer": 0
   },
   {
     "id": 72,
-    "question": "Tortdagi shamlar kesmalar bilan bo'linganda bir bo'lakka bittadan ortiq sham tushsa ekranga nima chiqariladi?",
+    "question": "Katakchaning raqamlarni foiz, pul birligi yoki sana formatiga o'tkazish qayerdan bajariladi?",
     "options": [
-      "1",
-      "ERROR",
-      "NO",
-      "YES"
+      "Формат ячеек (Katakchalar formati)",
+      "Виad",
+      "Рецензирование",
+      "Разметка страницы"
     ],
-    "correctAnswer": 2
+    "correctAnswer": 0
   },
   {
     "id": 73,
-    "question": "Taqiqlangan n-burchak yasalishiga yo'l qo'ymaslik uchun kesmalar uzunligi qaysi qonuniyat asosida o'sishi kerak?",
+    "question": "Yangi ish varag'i (Лист) qo'shish uchun qaysi klavishlar birikmasi qo'llaniladi?",
     "options": [
-      "Fibonachchi ketma-ketligi (r := l + p)",
-      "Arifmetik progressiya",
-      "Geometrik progressiya",
-      "Faktoriallar qatori"
+      "Shift + F11",
+      "Ctrl + F1",
+      "Alt + F4",
+      "F8"
     ],
     "correctAnswer": 0
   },
   {
     "id": 74,
-    "question": "To'g'ri burchakli jadval uchlaridagi 4 ta yacheyka yig'indisi eng katta bo'lgan to'rtburchakni topish masalasi nomi nima?",
+    "question": "Excelda sonlar qatnashgan katakchalar sonini hisoblovchi funksiya qaysi?",
     "options": [
-      "Qiyin masala",
-      "Oson bo'lmagan masala (problem)",
-      "Jadval tasviri",
-      "Maksimal to'rtburchak"
+      "СУММ",
+      "СЧЁТ (COUNT)",
+      "ДЛСТР (LEN)",
+      "ТЕКСТ (TEXT)"
     ],
     "correctAnswer": 1
   },
   {
     "id": 75,
-    "question": "Prezident dollar va yevroga neft sotib olishi masalasida javob qanday formatda chiqarilishi talab etiladi?",
+    "question": "Formulalar paneli (Строка формул) qayerda joylashgan?",
     "options": [
-      "Butun son ko'rinishida",
-      "Verguldan keyin 4 ta belgi bilan",
-      "Butundan keyin kamida ikkita belgi bilan",
-      "Standart eksponentsial shaklda"
+      "Holat satri yonida",
+      "Tasmali menyuning ostida, ish maydonining tepasida",
+      "Ekranning eng pastida",
+      "Faгat \"Вставка\" oynasida"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 76,
+    "question": "Microsoft PowerPoint dasturida yaratilgan taqdimot fayllarining kengaytmasi qaysi?",
+    "options": [
+      ".docx",
+      ".xlsx",
+      ".pptx",
+      ".mp3"
     ],
     "correctAnswer": 2
   },
   {
-    "id": 76,
-    "question": "Oq va qora otlar kerakli katakka borishi uchun harakatlanish ketma-ketligi qaysi faylga yoziladi?",
-    "options": [
-      "result.out",
-      "output.txt",
-      "horse.out",
-      "knights.out"
-    ],
-    "correctAnswer": 3
-  },
-  {
     "id": 77,
-    "question": "\"Saper\" o'yini maydonida mina joylashgan katak qanday belgi bilan ifodalanadi?",
+    "question": "Taqdimotning bitta alohida sahifasi nima deb ataladi?",
     "options": [
-      "\"*\" (yulduzcha)",
-      "\".\" (nuqta)",
-      "\"M\" harfi",
-      "\"X\" belgisi"
+      "Sahifa",
+      "Slayd",
+      "Varag'",
+      "Hujjat"
     ],
-    "correctAnswer": 0
+    "correctAnswer": 1
   },
   {
     "id": 78,
-    "question": "\"Saper\" maydonida bo'sh katak qanday belgi bilan belgilanadi?",
+    "question": "Yangi slayd qo'shish uchun qaysi tugmalar birikmasi bosiladi?",
     "options": [
-      "Bo'sh joy (probel)",
-      "\".\" (nuqta)",
-      "\"0\" raqami",
-      "\"-\" (chiziqcha)"
+      "Ctrl + N",
+      "Ctrl + M",
+      "Ctrl + S",
+      "Ctrl + P"
     ],
     "correctAnswer": 1
   },
   {
     "id": 79,
-    "question": "Vaqtni yozgi vaqtga o'tkazishda soat ko'rsatkichi qaysi formatda chiqariladi?",
+    "question": "Slayd namoyishini (prezentatsiyani) eng birinchi slayddan boshlash qaysi klavish orqali amalga oshiriladi?",
     "options": [
-      "hh:mm:ss",
-      "h:m",
-      "«hh : mm»",
-      "mm:hh"
+      "F1",
+      "F5",
+      "Shift + F5",
+      "F11"
     ],
-    "correctAnswer": 2
+    "correctAnswer": 1
   },
   {
     "id": 80,
-    "question": "R radiusli aylanadagi ustunga bog'langan echkining o'tloqning teng yarmini yeyishi masalasi nomi nima?",
+    "question": "Taqdimot namoyishini ayni paytda turgan slayddan boshlash uchun qaysi birikma bosiladi?",
     "options": [
-      "O'tloq masalasi",
-      "Bog'langan arqon",
-      "Aylana yuzasi",
-      "Echki haqidagi masala"
+      "F5",
+      "Shift + F5",
+      "Ctrl + F5",
+      "Alt + F5"
     ],
-    "correctAnswer": 3
+    "correctAnswer": 1
   },
   {
     "id": 81,
-    "question": "Echki masalasida D masofa bo'yicha yem yuzasini hisoblashda burchak qaysi teskari trigonometrik funksiya orqali topiladi?",
+    "question": "Taqdimot namoyishini muddatidan oldin to'xtatish va tahrirlashga qaytish uchun qaysi tugma bosiladi?",
     "options": [
-      "ARCTAN",
-      "ARCSIN",
-      "ARCCOS",
-      "ARCCOT"
+      "Enter",
+      "Space (probel)",
+      "Esc",
+      "Tab"
     ],
     "correctAnswer": 2
   },
   {
     "id": 82,
-    "question": "Hodisa guvohidan olingan avtomobil nomerida nechta harf va nechta raqam qatnashadi?",
+    "question": "Slaydlar orasidagi o'tish harakatlari va effektlari qaysi menyuda sozlanadi?",
     "options": [
-      "2 ta harf, 4 ta raqam",
-      "3 ta harf va 3 ta raqam",
-      "4 ta harf, 2 ta raqam",
-      "1 ta harf, 5 ta raqam"
+      "Анимация (Animations)",
+      "Переходы (Transitions)",
+      "Дизайн (Design)",
+      "Вид (View)"
     ],
     "correctAnswer": 1
   },
   {
     "id": 83,
-    "question": "Sex konveyerida mahsulotlar nechta konteynerga teng taqsimlanishi kerak?",
+    "question": "Slayd ichidagi obyektlarga (matn, rasm, shakl) harakat berish qaysi bo'limdan qilinadi?",
     "options": [
-      "2 ta",
-      "4 ta",
-      "3 ta",
-      "5 ta"
+      "Переходы",
+      "Анимация (Animations)",
+      "Макет",
+      "Вставка"
     ],
-    "correctAnswer": 2
+    "correctAnswer": 1
   },
   {
     "id": 84,
-    "question": "Yo'lchi varoqdagi aylanachalarni qaysi 3 ta rangdan biriga bo'yagan?",
+    "question": "Slaydlar dizayni va fon rasmini o'zgartirish qaysi menyudan amalga oshiriladi?",
     "options": [
-      "Oq, qora, kulrang",
-      "Sariq, ko'k, yashil",
-      "Qizil, sariq, oq",
-      "Qizil, yashil, ko'k (‘R’, ‘G’, ‘B’)"
-    ],
-    "correctAnswer": 3
-  },
-  {
-    "id": 85,
-    "question": "Bekinmachoq o'yinida bolalarning aylanadan chiqishni unutib xato sanashi qaysi masala nomi bilan berilgan?",
-    "options": [
-      "Noto'g'ri hisoblagich (wrong)",
-      "Doiraviy o'yin",
-      "Bolalar sanog'i",
-      "Bekinmachoq"
+      "Дизайн (Design)",
+      "Главная",
+      "Ссылки",
+      "Файл"
     ],
     "correctAnswer": 0
   },
   {
-    "id": 86,
-    "question": "Murakkab sonlarni o'chirib faqat tub sonlarni qoldiruvchi qadimiy algoritm nima deyiladi?",
+    "id": 85,
+    "question": "Barcha slaydlarning umumiy andozasini (shablonini) bir joyda o'zgartirish rejimi qanday nomlanadi?",
     "options": [
-      "Evklid algoritmi",
-      "Eratosfen to'ri",
-      "Pifagor jadvali",
-      "Paskal g'alviri"
+      "Сортировщик слайдов",
+      "Образец слайдов (Slide Master)",
+      "Заметки",
+      "Структура"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 86,
+    "question": "Slaydga video yoki audio fayl joylashtirish qaysi menyudan bajariladi?",
+    "options": [
+      "Главная",
+      "Вставка (Insert)",
+      "Дизайн",
+      "Переходы"
     ],
     "correctAnswer": 1
   },
   {
     "id": 87,
-    "question": "Eratosfen to'ri dasturida tekshiruvchi sikl qaysi chegaragacha davom etadi?",
+    "question": "Bir slayd orqali boshqa slaydga yoki internet sahifasiga tezkor o'tish imkonini beruvchi vosita nima?",
     "options": [
-      "f := n div 2",
-      "f := n - 1",
-      "f := trunc(sqrt(n))",
-      "f := round(n / 3)"
-    ],
-    "correctAnswer": 2
-  },
-  {
-    "id": 88,
-    "question": "Eratosfen algoritmi dasturida murakkab sonlar o'chirilganda massiv elementi qaysi songa tenglashtiriladi?",
-    "options": [
-      "-1",
-      "1",
-      "null",
-      "0"
-    ],
-    "correctAnswer": 3
-  },
-  {
-    "id": 89,
-    "question": "\"4 dan katta har qanday juft sonni ikkita tub son yig'indisi ko'rinishida ifodalash mumkin\" bu qaysi gipoteza?",
-    "options": [
-      "Goldbax gipotezasi",
-      "Ferma teoremasi",
-      "Eyler gipotezasi",
-      "Riman gipotezasi"
+      "Giperhavola (Гиперссылка)",
+      "Animatsiya",
+      "Kolontitul",
+      "SmartArt"
     ],
     "correctAnswer": 0
   },
   {
-    "id": 90,
-    "question": "Ayirmasi 2 ga teng bo'lgan tub sonlar (masalan, 5 va 7) fanda nima deb ataladi?",
+    "id": 88,
+    "question": "Matnli ro'yxatni chiroyli sxema yoki vizual shakllarga aylantiruvchi grafik vosita nima?",
     "options": [
-      "Qo'shni sonlar",
-      "Egizaklar (egizak tub sonlar)",
-      "Do'st sonlar",
-      "Simmetrik sonlar"
+      "WordArt",
+      "SmartArt",
+      "Diagramma",
+      "Jadval"
     ],
     "correctAnswer": 1
   },
   {
-    "id": 91,
-    "question": "Ikkita shaxs 11 va 12 soatlar orasida kelib 20 minut (1/3 soat) kutishi geometrik jihatdan qaysi shartni beradi?",
+    "id": 89,
+    "question": "Slaydlarni qulay tartiblash va kichik ko'rinishda bir vaqtda ko'rish rejimi qaysi?",
     "options": [
-      "|x - y| <= 1/3",
-      "x + y <= 1/3",
-      "x - y = 1/3",
-      "|x - y| >= 1/3"
+      "Обычный",
+      "Сортировщик слайдов (Slide Sorter)",
+      "Показ слайдов",
+      "Страницы заметок"
+    ],
+    "correctAnswer": 1
+  },
+  {
+    "id": 90,
+    "question": "Taqdimot namoyishi paytida keyingi slaydga o'tish uchun qaysi klavishni bosish mumkin?",
+    "options": [
+      "Probel (Space) yoki sichqonchaning chap tugmasi",
+      "Backspace",
+      "Esc",
+      "Ctrl"
     ],
     "correctAnswer": 0
   },
   {
-    "id": 92,
-    "question": "20 minut kutish shartida uchrashuvning sodir bo'lish ehtimoli Monte-Karlo usulida taxminan qanchaga teng chiqadi?",
+    "id": 91,
+    "question": "Kompyuterda o'chirilgan fayllar butunlay yo'qolishdan oldin qayerga tushadi?",
     "options": [
-      "0.3333",
-      "0.7500",
-      "0.5000",
-      "0.5555 (5/9)"
+      "Qattiq disk tubiga",
+      "Savatga (Корзина)",
+      "Fleshkaga",
+      "Boshqaruv paneliga"
     ],
-    "correctAnswer": 3
+    "correctAnswer": 1
+  },
+  {
+    "id": 92,
+    "question": "Faylni savatga tushirmasdan, butunlay o'chirib yuborish qaysi tugmalar birikmasi orqali bajariladi?",
+    "options": [
+      "Delete",
+      "Shift + Delete",
+      "Ctrl + Delete",
+      "Alt + Delete"
+    ],
+    "correctAnswer": 1
   },
   {
     "id": 93,
-    "question": "Tomoni 1 bo'lgan katak markazidan 1/2 dan kichik masofada joylashish ehtimoli qaysi sonni hisoblashda qo'llaniladi?",
+    "question": "Ochilgan dastur yoki faol oynani tezda yopish qaysi birikma bilan bo'ladi?",
     "options": [
-      "Pi sonini (Pi / 4)",
-      "e sonini",
-      "Oltin nisbatni",
-      "Ildiz ostida 2 ni"
+      "Alt + F4",
+      "Ctrl + F4",
+      "Shift + F4",
+      "Win + D"
     ],
     "correctAnswer": 0
   },
   {
     "id": 94,
-    "question": "Kvadratga tushgan m ta nuqta va umumiy n ta nuqtadan Pi sonini topish formulasi dasturda qanday berilgan?",
+    "question": "Ish stolidagi barcha ochiq oynalarni birdaniga pastga tushirish (Minimize All) qaysi birikma orqali bajariladi?",
     "options": [
-      "p := m / n",
-      "p := 4 * m / n",
-      "p := 2 * m / n",
-      "p := m / (4 * n)"
-    ],
-    "correctAnswer": 1
-  },
-  {
-    "id": 95,
-    "question": "Tekislikka uzunligi 1 bo'lgan igna tashlanganda chiziqni kesib o'tish ehtimoli qaysi klassik masala hisoblanadi?",
-    "options": [
-      "Eyler masalasi",
-      "Paskal masalasi",
-      "Byuffonning igna to'g'risidagi masalasi",
-      "Gauss masalasi"
-    ],
-    "correctAnswer": 2
-  },
-  {
-    "id": 96,
-    "question": "Byuffon ignasi masalasida ehtimollik qaysi analitik qiymatga teng bo'ladi?",
-    "options": [
-      "1 / Pi",
-      "Pi / 2",
-      "4 / Pi",
-      "2 / Pi"
-    ],
-    "correctAnswer": 3
-  },
-  {
-    "id": 97,
-    "question": "Benaress ibodatxonasidagi Xanoy minorasi afsonasida rohiblar jami nechta oltin diskni ko'chirishlari kerak bo'lgan?",
-    "options": [
-      "64 ta",
-      "32 ta",
-      "128 ta",
-      "100 ta"
+      "Win + D",
+      "Win + E",
+      "Win + L",
+      "Ctrl + Tab"
     ],
     "correctAnswer": 0
   },
   {
-    "id": 98,
-    "question": "n ta diskdan iborat Xanoy minorasini ko'chirish uchun jami nechta operatsiya talab etiladi?",
+    "id": 95,
+    "question": "Windows tizimida \"Проводник\" (Explorer) fayl menejerini ochuvchi qisqa tugmalar qaysi?",
     "options": [
-      "2 * n",
-      "2^n - 1",
-      "n^2",
-      "2^n + 1"
+      "Win + E",
+      "Win + R",
+      "Win + P",
+      "Win + I"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 96,
+    "question": "Qaysi xotira vositasi magnit maydon ta'sirida o'z ma'lumotlarini yo'qotishi mumkin?",
+    "options": [
+      "SSD",
+      "Fleshka",
+      "HDD",
+      "ROM"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "id": 97,
+    "question": "Excelda tayyorlangan jadvalni Word dasturiga ko'chirib o'tkazish mumkinmi?",
+    "options": [
+      "Yo'q, umuman mumkin emas",
+      "Ha, nusxalash va joylashtirish (Copy/Paste) orqali mumkin",
+      "Faгat rasm qilib o'tkasa bo'ladi",
+      "Faгat matnini o'tkazsa bo'ladi, chiziqlari ko'chmaydi"
     ],
     "correctAnswer": 1
   },
   {
-    "id": 99,
-    "question": "Shaxmat doskasida 8 ta ferz bir-birini urmasligi uchun ularning diagonallari to'qnashmaslik sharti qanday yoziladi?",
+    "id": 98,
+    "question": "PowerPoint taqdimotini PDF formatida saqlash mumkinmi?",
     "options": [
-      "D[i] <> D[j]",
-      "abs(D[i] - D[j]) = abs(i - j)",
-      "abs(D[i] - D[j]) <> abs(i - j)",
-      "D[i] + i <> D[j] + j"
+      "Ha, \"Экспорт\" yoki \"Сохранить как\" orqali mumkin",
+      "Yo'q, dastur bunga ruxsat bermaydi",
+      "Faqat maxsus pullik dasturlar bilan mumkin",
+      "Faqat video formatda saqlash mumkin"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "id": 99,
+    "question": "Ekran rasmini (skrinshot) tezda olish uchun klaviaturadagi qaysi tugma qo'llaniladi?",
+    "options": [
+      "Scroll Lock",
+      "Pause Break",
+      "Print Screen (PrtScn)",
+      "Num Lock"
     ],
     "correctAnswer": 2
   },
   {
     "id": 100,
-    "question": "Santa-Klausning 5x5 o'lchamli jadvaldagi mahfiy tilida qaysi lotin harfi ishlatilmaydi?",
+    "question": "Kompyuter dasturiy ta'minoti va apparat qismlarini boshqaruvchi asosiy tizim nima deb ataladi?",
     "options": [
-      "'X'",
-      "'Y'",
-      "'W'",
-      "'Z'"
+      "Ofis dasturi",
+      "Operatsion tizim (masalan: Windows, Linux)",
+      "Antivirus",
+      "Brauzer"
     ],
-    "correctAnswer": 2
+    "correctAnswer": 1
   }
 ];
 
